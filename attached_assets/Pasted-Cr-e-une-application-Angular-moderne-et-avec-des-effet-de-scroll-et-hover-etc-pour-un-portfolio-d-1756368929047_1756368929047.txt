@@ -1,0 +1,86 @@
+Crée une application Angular moderne et avec des effet de scroll et hover etc .. pour un portfolio de développeur avec les caractéristiques suivantes :
+
+1. Fonctionnalités principales
+
+Light & Dark mode (switch manuel + détection du thème système).
+
+Multilingue (Français / Anglais) avec ngx-translate ou un autre système d’internationalisation.
+
+Navigation fluide avec un menu latéral ou en haut.
+
+Responsive design (desktop, tablette, mobile).
+
+Animations modernes (Angular Animations ou libraries comme AOS/GSAP).
+
+2. Sections du portfolio
+
+Accueil : Nom, titre, photo, bouton "Télécharger CV".
+
+À propos de moi (FR/EN) :
+
+En tant qu’étudiant ingénieur en Cloud et développeur en activité, je me distingue par ma capacité à apprendre rapidement et à m’adapter à des environnements techniques variés, allant du développement à l’architecture cloud, en passant par la BI.
+
+Compétences techniques (avec icônes et barres de progression) :
+
+Programmation : Python, Java Spring
+
+Développement Web : HTML5, CSS3, Bootstrap, JavaScript, PHP, Angular, Node.js, WordPress
+
+Cloud & DevOps : OpenStack, Docker, Kubernetes, Ansible, Jenkins, Grafana, OVH
+
+Administration Système & Réseaux : Linux, NFS, Services réseau, VLAN, Routage
+
+Bases de données & BI : SQL Server, MongoDB, phpMyAdmin, Power BI Desktop
+
+Outils & autres : Git, UML, Odoo, Microsoft Office, Photoshop, Filmora
+
+Certifications :
+
+Python niveau 1 (FormaLab)
+
+Intro to AI (LinkedIn)
+
+Sponsoring (LeCoach)
+
+Expériences professionnelles :
+
+2023 - Présent | Triweb – Développeur
+Conception, développement et déploiement d’applications, mise en place d’infrastructures serveur sous Ubuntu et automatisation de processus métier.
+
+2022 | Freelance
+
+2021 | Développeur WordPress
+
+Assurance COMAR | Business Analytics (Stage PFE 5 mois)
+
+Projets professionnels (avec images/icônes + description).
+
+Projets académiques (liste + détails).
+
+Compétitions & expériences associatives :
+
+Finaliste OSTx Open Startup (2020/2021)
+
+1er prix Hackathon IEEE ISET Bizerte (2021)
+
+Rotary Carthage La Baie Espoir : Vice-président 2022-2023
+
+Rotaract Tunis El Manar : Président 2021-2022
+
+BIL Omrane Supérieur : Président 2018-2019
+
+Éducation :
+
+2022-Présent : Ingénierie en informatique (Cloud Computing & Architecture) – ESPRIT
+
+2020-2022 : Licence en Business Intelligence – FSEGT
+
+2019-2020 : Business Computing – ISIMA
+
+2018-2019 : Bac Sciences Techniques – Lycée Bardo
+
+Contact :
+
+📞 +216 20 887 855
+
+📧 k.talel99@gmail.com
