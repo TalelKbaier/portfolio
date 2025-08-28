@@ -1,0 +1,307 @@
+// Light Theme (Default)
+:root,
+[data-theme="light"] {
+  // Background Colors
+  --bg-color: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-tertiary: #f1f5f9;
+  --bg-color-alpha: rgba(255, 255, 255, 0.9);
+  
+  // Text Colors
+  --text-color: #1e293b;
+  --text-secondary: #64748b;
+  --text-tertiary: #94a3b8;
+  --text-muted: #cbd5e1;
+  
+  // Border Colors
+  --border-color: #e2e8f0;
+  --border-secondary: #cbd5e1;
+  --border-focus: #6366f1;
+  
+  // Shadow Colors
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --shadow-color-light: rgba(0, 0, 0, 0.05);
+  --shadow-color-dark: rgba(0, 0, 0, 0.15);
+  
+  // Surface Colors
+  --surface-color: #ffffff;
+  --surface-hover: #f8fafc;
+  --surface-active: #f1f5f9;
+}
+
+// Dark Theme
+[data-theme="dark"] {
+  // Background Colors
+  --bg-color: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-tertiary: #334155;
+  --bg-color-alpha: rgba(15, 23, 42, 0.9);
+  
+  // Text Colors
+  --text-color: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-tertiary: #94a3b8;
+  --text-muted: #64748b;
+  
+  // Border Colors
+  --border-color: #334155;
+  --border-secondary: #475569;
+  --border-focus: #8b5cf6;
+  
+  // Shadow Colors
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --shadow-color-light: rgba(0, 0, 0, 0.2);
+  --shadow-color-dark: rgba(0, 0, 0, 0.4);
+  
+  // Surface Colors
+  --surface-color: #1e293b;
+  --surface-hover: #334155;
+  --surface-active: #475569;
+  
+  // Adjust primary colors for dark theme
+  --primary-color: #8b5cf6;
+  --primary-color-dark: #7c3aed;
+  --primary-gradient: linear-gradient(135deg, #8b5cf6 0%, #a855f7 100%);
+}
+
+// Theme-specific component adjustments
+[data-theme="dark"] {
+  // Scrollbar
+  ::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+  }
+  
+  // Selection
+  ::selection {
+    background: var(--primary-color);
+    color: var(--bg-color);
+  }
+  
+  ::-moz-selection {
+    background: var(--primary-color);
+    color: var(--bg-color);
+  }
+  
+  // Form elements
+  input,
+  textarea,
+  select {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+    color: var(--text-color);
+    
+    &::placeholder {
+      color: var(--text-tertiary);
+    }
+    
+    &:focus {
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+    }
+  }
+  
+  // Cards and surfaces
+  .card {
+    background: var(--surface-color);
+    border-color: var(--border-color);
+    
+    &:hover {
+      background: var(--surface-hover);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  // Code blocks
+  code,
+  pre {
+    background: var(--bg-secondary);
+    color: #e2e8f0;
+    border: 1px solid var(--border-color);
+  }
+  
+  // Images and media
+  img {
+    opacity: 0.9;
+    
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+// Theme transition
+html {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+// Component-specific theme adjustments
+.header {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  
+  &.scrolled {
+    background: var(--bg-color-alpha);
+    box-shadow: 0 4px 6px -1px var(--shadow-color-light);
+  }
+}
+
+// Buttons in different themes
+.btn {
+  &.btn-outline {
+    [data-theme="dark"] & {
+      border-color: var(--border-secondary);
+      color: var(--text-color);
+      
+      &:hover {
+        background: var(--surface-hover);
+        border-color: var(--primary-color);
+      }
+    }
+  }
+}
+
+// Form elements theme adjustments
+.form-control {
+  [data-theme="dark"] & {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+    color: var(--text-color);
+    
+    &:focus {
+      background: var(--bg-color);
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+    }
+    
+    &::placeholder {
+      color: var(--text-tertiary);
+      opacity: 0.8;
+    }
+  }
+}
+
+// Status colors that work in both themes
+.status-completed {
+  [data-theme="light"] & {
+    background: #dcfce7;
+    color: #166534;
+  }
+  
+  [data-theme="dark"] & {
+    background: rgba(34, 197, 94, 0.1);
+    color: #4ade80;
+  }
+}
+
+.status-progress {
+  [data-theme="light"] & {
+    background: #fef3c7;
+    color: #92400e;
+  }
+  
+  [data-theme="dark"] & {
+    background: rgba(245, 158, 11, 0.1);
+    color: #fbbf24;
+  }
+}
+
+.status-planned {
+  [data-theme="light"] & {
+    background: #f1f5f9;
+    color: #475569;
+  }
+  
+  [data-theme="dark"] & {
+    background: rgba(148, 163, 184, 0.1);
+    color: #94a3b8;
+  }
+}
+
+// Success/Error messages
+.success-message {
+  [data-theme="dark"] & {
+    background: rgba(34, 197, 94, 0.1);
+    color: #4ade80;
+    border-color: rgba(34, 197, 94, 0.2);
+  }
+}
+
+.error-message {
+  [data-theme="dark"] & {
+    background: rgba(239, 68, 68, 0.1);
+    color: #f87171;
+    border-color: rgba(239, 68, 68, 0.2);
+  }
+}
+
+// Accessibility improvements
+@media (prefers-reduced-motion: reduce) {
+  html,
+  body,
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+// High contrast mode support
+@media (prefers-contrast: high) {
+  :root {
+    --border-color: #000000;
+    --text-secondary: #000000;
+  }
+  
+  [data-theme="dark"] {
+    --border-color: #ffffff;
+    --text-secondary: #ffffff;
+  }
+}
+
+// System theme detection
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    // Automatically apply dark theme if no theme is set and user prefers dark
+    --bg-color: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-tertiary: #334155;
+    --bg-color-alpha: rgba(15, 23, 42, 0.9);
+    --text-color: #f8fafc;
+    --text-secondary: #cbd5e1;
+    --text-tertiary: #94a3b8;
+    --text-muted: #64748b;
+    --border-color: #334155;
+    --border-secondary: #475569;
+    --border-focus: #8b5cf6;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --shadow-color-light: rgba(0, 0, 0, 0.2);
+    --shadow-color-dark: rgba(0, 0, 0, 0.4);
+    --surface-color: #1e293b;
+    --surface-hover: #334155;
+    --surface-active: #475569;
+    --primary-color: #8b5cf6;
+    --primary-color-dark: #7c3aed;
+    --primary-gradient: linear-gradient(135deg, #8b5cf6 0%, #a855f7 100%);
+  }
+}
+
+// Force light theme for specific components if needed
+.force-light-theme {
+  --bg-color: #ffffff;
+  --bg-secondary: #f8fafc;
+  --text-color: #1e293b;
+  --text-secondary: #64748b;
+  --border-color: #e2e8f0;
+}
+
+// Force dark theme for specific components if needed
+.force-dark-theme {
+  --bg-color: #0f172a;
+  --bg-secondary: #1e293b;
+  --text-color: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --border-color: #334155;
+}

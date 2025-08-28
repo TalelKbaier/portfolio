@@ -1,0 +1,17 @@
+<div class="app-container">
+  <app-header></app-header>
+  
+  <main class="main-content">
+    <app-home></app-home>
+    <app-about></app-about>
+    <app-skills></app-skills>
+    <app-experience></app-experience>
+    <app-projects></app-projects>
+    <app-contact></app-contact>
+  </main>
+  
+  <!-- Scroll to top button -->
+  <button class="scroll-to-top" (click)="scrollToTop()" [class.visible]="showScrollButton">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+</div>

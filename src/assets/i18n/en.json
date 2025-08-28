@@ -1,0 +1,101 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "home": {
+    "greeting": "Hello, I'm",
+    "role": "Cloud Engineer & Web Developer",
+    "description": "As an engineering student in Cloud Computing and active developer, I distinguish myself through my ability to quickly learn and adapt to various technical environments, from development to cloud architecture, including BI.",
+    "downloadCV": "Download CV",
+    "contactMe": "Contact Me",
+    "scrollDown": "Scroll Down"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "Get to know me better",
+    "description": "As an engineering student in Cloud Computing and active developer, I distinguish myself through my ability to quickly learn and adapt to various technical environments, from development to cloud architecture, including BI.",
+    "education": "Education",
+    "educationDesc": "Currently pursuing Engineering in Cloud Computing & Architecture at ESPRIT",
+    "development": "Development",
+    "developmentDesc": "Full-stack development with modern technologies and frameworks",
+    "cloud": "Cloud & DevOps",
+    "cloudDesc": "Infrastructure automation and cloud architecture expertise",
+    "yearsExperience": "Years Experience",
+    "projects": "Projects Completed",
+    "certifications": "Certifications",
+    "awards": "Awards Won",
+    "personalInfo": "Personal Information",
+    "age": "Age",
+    "location": "Location",
+    "languages": "Languages",
+    "languagesList": "French, English, Arabic",
+    "availability": "Availability",
+    "availabilityStatus": "Available for opportunities"
+  },
+  "skills": {
+    "title": "Skills & Expertise",
+    "subtitle": "Technologies and tools I work with",
+    "all": "All Skills",
+    "programming": "Programming",
+    "web": "Web Development",
+    "cloud": "Cloud & DevOps",
+    "database": "Databases & BI",
+    "tools": "Tools & Others",
+    "certifications": "Certifications"
+  },
+  "experience": {
+    "title": "Experience & Education",
+    "subtitle": "My professional journey and achievements",
+    "professional": "Professional",
+    "education": "Education",
+    "competitions": "Competitions",
+    "associative": "Leadership",
+    "yearsWork": "Years of Work",
+    "awards": "Competition Awards",
+    "leadership": "Leadership Roles",
+    "degrees": "Academic Degrees"
+  },
+  "projects": {
+    "title": "Projects & Work",
+    "subtitle": "Showcase of my development projects",
+    "featured": "Featured Projects",
+    "academic": "Academic Projects",
+    "completed": "Completed",
+    "inProgress": "In Progress",
+    "planned": "Planned"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Let's work together on your next project",
+    "getInTouch": "Contact Information",
+    "description": "I'm always open to discussing new opportunities, innovative projects, or just having a chat about technology and development.",
+    "sendMessage": "Send a Message",
+    "formDescription": "Fill out the form below and I'll get back to you as soon as possible.",
+    "cvDownload": "Download My CV",
+    "cvDescription": "Get a complete overview of my experience, skills, and education.",
+    "downloadCV": "Download CV",
+    "followMe": "Follow Me",
+    "location": "Location",
+    "locationValue": "Tunis, Tunisia",
+    "availability": "Available for remote work worldwide",
+    "form": {
+      "name": "Full Name",
+      "namePlaceholder": "Enter your full name",
+      "email": "Email Address",
+      "emailPlaceholder": "Enter your email address",
+      "subject": "Subject",
+      "subjectPlaceholder": "What is this about?",
+      "message": "Message",
+      "messagePlaceholder": "Tell me about your project or inquiry...",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "success": "Thank you! Your message has been sent successfully. I'll get back to you soon.",
+      "error": "Sorry, there was an error sending your message. Please try again or contact me directly."
+    }
+  }
+}

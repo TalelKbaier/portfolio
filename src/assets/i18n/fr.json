@@ -1,0 +1,101 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "skills": "Compétences",
+    "experience": "Expérience",
+    "projects": "Projets",
+    "contact": "Contact"
+  },
+  "home": {
+    "greeting": "Bonjour, je suis",
+    "role": "Ingénieur Cloud & Développeur Web",
+    "description": "En tant qu'étudiant ingénieur en Cloud et développeur en activité, je me distingue par ma capacité à apprendre rapidement et à m'adapter à des environnements techniques variés, allant du développement à l'architecture cloud, en passant par la BI.",
+    "downloadCV": "Télécharger CV",
+    "contactMe": "Me Contacter",
+    "scrollDown": "Défiler vers le bas"
+  },
+  "about": {
+    "title": "À Propos de Moi",
+    "subtitle": "Apprenez à mieux me connaître",
+    "description": "En tant qu'étudiant ingénieur en Cloud et développeur en activité, je me distingue par ma capacité à apprendre rapidement et à m'adapter à des environnements techniques variés, allant du développement à l'architecture cloud, en passant par la BI.",
+    "education": "Formation",
+    "educationDesc": "Actuellement en Ingénierie Cloud Computing & Architecture à ESPRIT",
+    "development": "Développement",
+    "developmentDesc": "Développement full-stack avec les technologies et frameworks modernes",
+    "cloud": "Cloud & DevOps",
+    "cloudDesc": "Expertise en automatisation d'infrastructure et architecture cloud",
+    "yearsExperience": "Années d'Expérience",
+    "projects": "Projets Réalisés",
+    "certifications": "Certifications",
+    "awards": "Prix Remportés",
+    "personalInfo": "Informations Personnelles",
+    "age": "Âge",
+    "location": "Localisation",
+    "languages": "Langues",
+    "languagesList": "Français, Anglais, Arabe",
+    "availability": "Disponibilité",
+    "availabilityStatus": "Disponible pour de nouvelles opportunités"
+  },
+  "skills": {
+    "title": "Compétences & Expertise",
+    "subtitle": "Technologies et outils que j'utilise",
+    "all": "Toutes les Compétences",
+    "programming": "Programmation",
+    "web": "Développement Web",
+    "cloud": "Cloud & DevOps",
+    "database": "Bases de Données & BI",
+    "tools": "Outils & Autres",
+    "certifications": "Certifications"
+  },
+  "experience": {
+    "title": "Expérience & Formation",
+    "subtitle": "Mon parcours professionnel et mes réalisations",
+    "professional": "Professionnel",
+    "education": "Formation",
+    "competitions": "Compétitions",
+    "associative": "Leadership",
+    "yearsWork": "Années de Travail",
+    "awards": "Prix en Compétition",
+    "leadership": "Rôles de Leadership",
+    "degrees": "Diplômes Académiques"
+  },
+  "projects": {
+    "title": "Projets & Réalisations",
+    "subtitle": "Vitrine de mes projets de développement",
+    "featured": "Projets Phares",
+    "academic": "Projets Académiques",
+    "completed": "Terminé",
+    "inProgress": "En Cours",
+    "planned": "Planifié"
+  },
+  "contact": {
+    "title": "Prenons Contact",
+    "subtitle": "Travaillons ensemble sur votre prochain projet",
+    "getInTouch": "Informations de Contact",
+    "description": "Je suis toujours ouvert à discuter de nouvelles opportunités, de projets innovants, ou simplement pour échanger sur la technologie et le développement.",
+    "sendMessage": "Envoyer un Message",
+    "formDescription": "Remplissez le formulaire ci-dessous et je vous répondrai dans les plus brefs délais.",
+    "cvDownload": "Télécharger Mon CV",
+    "cvDescription": "Obtenez un aperçu complet de mon expérience, mes compétences et ma formation.",
+    "downloadCV": "Télécharger CV",
+    "followMe": "Me Suivre",
+    "location": "Localisation",
+    "locationValue": "Tunis, Tunisie",
+    "availability": "Disponible pour le travail à distance dans le monde entier",
+    "form": {
+      "name": "Nom Complet",
+      "namePlaceholder": "Entrez votre nom complet",
+      "email": "Adresse Email",
+      "emailPlaceholder": "Entrez votre adresse email",
+      "subject": "Sujet",
+      "subjectPlaceholder": "De quoi s'agit-il ?",
+      "message": "Message",
+      "messagePlaceholder": "Parlez-moi de votre projet ou de votre demande...",
+      "send": "Envoyer le Message",
+      "sending": "Envoi en cours...",
+      "success": "Merci ! Votre message a été envoyé avec succès. Je vous répondrai bientôt.",
+      "error": "Désolé, il y a eu une erreur lors de l'envoi de votre message. Veuillez réessayer ou me contacter directement."
+    }
+  }
+}

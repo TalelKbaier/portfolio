@@ -1,0 +1,174 @@
+<section id="projects" class="projects-section">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <h2 class="section-title">{{ translate('projects.title') }}</h2>
+      <p class="section-subtitle">{{ translate('projects.subtitle') }}</p>
+    </div>
+
+    <!-- Featured Projects -->
+    <div class="featured-projects" data-aos="fade-up" data-aos-delay="200">
+      <h3 class="featured-title">{{ translate('projects.featured') }}</h3>
+      <div class="featured-grid">
+        <div 
+          *ngFor="let project of getFeaturedProjects(); let i = index"
+          class="featured-project"
+          [attr.data-aos]="'zoom-in'"
+          [attr.data-aos-delay]="i * 200">
+          
+          <div class="project-image">
+            <div class="image-placeholder">
+              <i class="fas fa-code"></i>
+            </div>
+            <div class="project-overlay">
+              <div class="project-actions">
+                <a *ngIf="project.link" [href]="project.link" class="action-btn" target="_blank">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a *ngIf="project.github" [href]="project.github" class="action-btn" target="_blank">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-content">
+            <div class="project-header">
+              <h4 class="project-title">{{ project.title }}</h4>
+              <span class="project-status" [class]="getStatusClass(project.status)">
+                {{ getStatusText(project.status) }}
+              </span>
+            </div>
+            
+            <p class="project-description">{{ project.description }}</p>
+            
+            <div class="project-technologies">
+              <span 
+                *ngFor="let tech of project.technologies"
+                class="tech-tag">
+                {{ tech }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category Filter -->
+    <div class="category-filter" data-aos="fade-up" data-aos-delay="400">
+      <button 
+        *ngFor="let category of projectCategories"
+        class="filter-btn" 
+        [class.active]="activeCategory === category.key"
+        (click)="setActiveCategory(category.key)">
+        {{ category.name }}
+      </button>
+    </div>
+
+    <!-- All Projects Grid -->
+    <div class="projects-grid" data-aos="fade-up" data-aos-delay="600">
+      <div 
+        *ngFor="let project of getFilteredProjects(); let i = index"
+        class="project-card"
+        [attr.data-aos]="'fade-up'"
+        [attr.data-aos-delay]="i * 100">
+        
+        <div class="card-image">
+          <div class="image-placeholder">
+            <i class="fas" 
+               [class.fa-globe]="project.category === 'web'"
+               [class.fa-cloud]="project.category === 'cloud'"
+               [class.fa-chart-bar]="project.category === 'data'"
+               [class.fa-mobile-alt]="project.category === 'mobile'"
+               [class.fa-robot]="project.category === 'ai'"></i>
+          </div>
+          <div class="card-overlay">
+            <div class="card-actions">
+              <a *ngIf="project.link" [href]="project.link" class="action-btn" target="_blank">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+              <a *ngIf="project.github" [href]="project.github" class="action-btn" target="_blank">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-content">
+          <div class="card-header">
+            <h4 class="card-title">{{ project.title }}</h4>
+            <span class="card-status" [class]="getStatusClass(project.status)">
+              {{ getStatusText(project.status) }}
+            </span>
+          </div>
+          
+          <p class="card-description">{{ project.description }}</p>
+          
+          <div class="card-technologies">
+            <span 
+              *ngFor="let tech of project.technologies.slice(0, 3)"
+              class="tech-tag">
+              {{ tech }}
+            </span>
+            <span *ngIf="project.technologies.length > 3" class="tech-more">
+              +{{ project.technologies.length - 3 }}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Academic Projects Section -->
+    <div class="academic-projects" data-aos="fade-up" data-aos-delay="800">
+      <h3 class="academic-title">{{ translate('projects.academic') }}</h3>
+      <div class="academic-list">
+        <div class="academic-item" data-aos="slide-up" data-aos-delay="200">
+          <div class="academic-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <div class="academic-content">
+            <h4>Système de gestion d'entreprise</h4>
+            <p>Développement d'un ERP complet avec gestion des ressources humaines, comptabilité et CRM.</p>
+            <div class="academic-tech">
+              <span>Java</span>
+              <span>Spring Boot</span>
+              <span>MySQL</span>
+              <span>Angular</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="academic-item" data-aos="slide-up" data-aos-delay="400">
+          <div class="academic-icon">
+            <i class="fas fa-brain"></i>
+          </div>
+          <div class="academic-content">
+            <h4>Système de recommandation IA</h4>
+            <p>Développement d'un système de recommandation basé sur l'intelligence artificielle pour l'e-commerce.</p>
+            <div class="academic-tech">
+              <span>Python</span>
+              <span>TensorFlow</span>
+              <span>Pandas</span>
+              <span>scikit-learn</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="academic-item" data-aos="slide-up" data-aos-delay="600">
+          <div class="academic-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <div class="academic-content">
+            <h4>Plateforme d'analyse de données</h4>
+            <p>Création d'une plateforme web pour l'analyse et la visualisation de big data en temps réel.</p>
+            <div class="academic-tech">
+              <span>React</span>
+              <span>D3.js</span>
+              <span>Node.js</span>
+              <span>MongoDB</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

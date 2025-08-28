@@ -1,0 +1,91 @@
+<section id="skills" class="skills-section">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <h2 class="section-title">{{ translate('skills.title') }}</h2>
+      <p class="section-subtitle">{{ translate('skills.subtitle') }}</p>
+    </div>
+
+    <!-- Category Filter -->
+    <div class="category-filter" data-aos="fade-up" data-aos-delay="200">
+      <button 
+        class="filter-btn" 
+        [class.active]="activeCategory === 'all'"
+        (click)="setActiveCategory('all')">
+        {{ translate('skills.all') }}
+      </button>
+      <button 
+        *ngFor="let category of skillCategories"
+        class="filter-btn" 
+        [class.active]="activeCategory === category.key"
+        (click)="setActiveCategory(category.key)">
+        {{ translate('skills.' + category.key) }}
+      </button>
+    </div>
+
+    <!-- Skills Grid -->
+    <div class="skills-grid" data-aos="fade-up" data-aos-delay="400">
+      <div 
+        *ngFor="let skill of getFilteredSkills(); let i = index"
+        class="skill-item"
+        [attr.data-aos]="'zoom-in'"
+        [attr.data-aos-delay]="i * 100">
+        
+        <div class="skill-header">
+          <div class="skill-icon">
+            <i [class]="skill.icon"></i>
+          </div>
+          <div class="skill-info">
+            <h4 class="skill-name">{{ skill.name }}</h4>
+            <span class="skill-level">{{ skill.level }}%</span>
+          </div>
+        </div>
+
+        <div class="skill-progress">
+          <div 
+            class="skill-progress-fill"
+            [style.width.%]="0">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Certifications -->
+    <div class="certifications" data-aos="fade-up" data-aos-delay="600">
+      <h3 class="certifications-title">{{ translate('skills.certifications') }}</h3>
+      <div class="certifications-grid">
+        <div class="certification-item" data-aos="flip-left" data-aos-delay="200">
+          <div class="cert-icon">
+            <i class="fab fa-python"></i>
+          </div>
+          <div class="cert-content">
+            <h4>Python niveau 1</h4>
+            <p>FormaLab</p>
+            <span class="cert-year">2023</span>
+          </div>
+        </div>
+
+        <div class="certification-item" data-aos="flip-left" data-aos-delay="400">
+          <div class="cert-icon">
+            <i class="fas fa-robot"></i>
+          </div>
+          <div class="cert-content">
+            <h4>Intro to AI</h4>
+            <p>LinkedIn Learning</p>
+            <span class="cert-year">2023</span>
+          </div>
+        </div>
+
+        <div class="certification-item" data-aos="flip-left" data-aos-delay="600">
+          <div class="cert-icon">
+            <i class="fas fa-handshake"></i>
+          </div>
+          <div class="cert-content">
+            <h4>Sponsoring</h4>
+            <p>LeCoach</p>
+            <span class="cert-year">2022</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

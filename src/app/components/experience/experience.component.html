@@ -1,0 +1,136 @@
+<section id="experience" class="experience-section">
+  <div class="container">
+    <div class="section-header" data-aos="fade-up">
+      <h2 class="section-title">{{ translate('experience.title') }}</h2>
+      <p class="section-subtitle">{{ translate('experience.subtitle') }}</p>
+    </div>
+
+    <!-- Experience Tabs -->
+    <div class="experience-tabs" data-aos="fade-up" data-aos-delay="200">
+      <button 
+        class="tab-button"
+        [class.active]="activeTab === 'professional'"
+        (click)="setActiveTab('professional')">
+        <i class="fas fa-briefcase"></i>
+        {{ translate('experience.professional') }}
+      </button>
+      <button 
+        class="tab-button"
+        [class.active]="activeTab === 'education'"
+        (click)="setActiveTab('education')">
+        <i class="fas fa-graduation-cap"></i>
+        {{ translate('experience.education') }}
+      </button>
+      <button 
+        class="tab-button"
+        [class.active]="activeTab === 'competitions'"
+        (click)="setActiveTab('competitions')">
+        <i class="fas fa-trophy"></i>
+        {{ translate('experience.competitions') }}
+      </button>
+      <button 
+        class="tab-button"
+        [class.active]="activeTab === 'associative'"
+        (click)="setActiveTab('associative')">
+        <i class="fas fa-users"></i>
+        {{ translate('experience.associative') }}
+      </button>
+    </div>
+
+    <!-- Timeline -->
+    <div class="timeline" data-aos="fade-up" data-aos-delay="400">
+      <div 
+        *ngFor="let exp of getCurrentExperiences(); let i = index"
+        class="timeline-item"
+        [attr.data-aos]="i % 2 === 0 ? 'fade-right' : 'fade-left'"
+        [attr.data-aos-delay]="i * 200">
+        
+        <div class="timeline-marker">
+          <div class="timeline-icon">
+            <i class="fas" 
+               [class.fa-briefcase]="exp.type === 'work'"
+               [class.fa-graduation-cap]="exp.type === 'education'"
+               [class.fa-trophy]="exp.type === 'competition'"></i>
+          </div>
+        </div>
+
+        <div class="timeline-content">
+          <div class="timeline-card">
+            <div class="card-header">
+              <div class="card-date">{{ exp.year }}</div>
+              <h3 class="card-title">{{ exp.title }}</h3>
+              <h4 class="card-company">{{ exp.company }}</h4>
+              <div class="card-meta" *ngIf="exp.duration || exp.location">
+                <span *ngIf="exp.duration" class="meta-item">
+                  <i class="fas fa-clock"></i>
+                  {{ exp.duration }}
+                </span>
+                <span *ngIf="exp.location" class="meta-item">
+                  <i class="fas fa-map-marker-alt"></i>
+                  {{ exp.location }}
+                </span>
+              </div>
+            </div>
+
+            <div class="card-body">
+              <p class="card-description">{{ exp.description }}</p>
+              
+              <div class="card-technologies" *ngIf="exp.technologies && exp.technologies.length > 0">
+                <span 
+                  *ngFor="let tech of exp.technologies"
+                  class="tech-tag">
+                  {{ tech }}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Summary Stats -->
+    <div class="experience-stats" data-aos="fade-up" data-aos-delay="600">
+      <div class="stats-container">
+        <div class="stat-item" data-aos="zoom-in" data-aos-delay="200">
+          <div class="stat-icon">
+            <i class="fas fa-briefcase"></i>
+          </div>
+          <div class="stat-content">
+            <div class="stat-number">3+</div>
+            <div class="stat-label">{{ translate('experience.yearsWork') }}</div>
+          </div>
+        </div>
+
+        <div class="stat-item" data-aos="zoom-in" data-aos-delay="400">
+          <div class="stat-icon">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <div class="stat-content">
+            <div class="stat-number">2</div>
+            <div class="stat-label">{{ translate('experience.awards') }}</div>
+          </div>
+        </div>
+
+        <div class="stat-item" data-aos="zoom-in" data-aos-delay="600">
+          <div class="stat-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <div class="stat-content">
+            <div class="stat-number">3</div>
+            <div class="stat-label">{{ translate('experience.leadership') }}</div>
+          </div>
+        </div>
+
+        <div class="stat-item" data-aos="zoom-in" data-aos-delay="800">
+          <div class="stat-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <div class="stat-content">
+            <div class="stat-number">3</div>
+            <div class="stat-label">{{ translate('experience.degrees') }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
