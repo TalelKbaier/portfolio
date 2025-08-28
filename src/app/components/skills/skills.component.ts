@@ -20,33 +20,46 @@ export class SkillsComponent implements OnInit {
   
   skills: Skill[] = [
     // Programming
-    { name: 'Python', level: 85, icon: 'fab fa-python', category: 'programming' },
-    { name: 'Java Spring', level: 80, icon: 'fab fa-java', category: 'programming' },
+    { name: 'Python', level: 90, icon: 'fab fa-python', category: 'programming' },
+    { name: 'Java Spring', level: 85, icon: 'fab fa-java', category: 'programming' },
+    { name: 'JavaScript', level: 88, icon: 'fab fa-js-square', category: 'programming' },
+    { name: 'TypeScript', level: 82, icon: 'fab fa-js-square', category: 'programming' },
     
-    // Web Development
-    { name: 'HTML5', level: 95, icon: 'fab fa-html5', category: 'web' },
-    { name: 'CSS3', level: 90, icon: 'fab fa-css3-alt', category: 'web' },
-    { name: 'JavaScript', level: 85, icon: 'fab fa-js-square', category: 'web' },
-    { name: 'Angular', level: 80, icon: 'fab fa-angular', category: 'web' },
-    { name: 'Node.js', level: 75, icon: 'fab fa-node-js', category: 'web' },
-    { name: 'PHP', level: 70, icon: 'fab fa-php', category: 'web' },
-    { name: 'WordPress', level: 85, icon: 'fab fa-wordpress', category: 'web' },
+    // Web Development  
+    { name: 'Angular', level: 85, icon: 'fab fa-angular', category: 'web' },
+    { name: 'Node.js', level: 80, icon: 'fab fa-node-js', category: 'web' },
+    { name: 'React', level: 78, icon: 'fab fa-react', category: 'web' },
+    { name: '.NET', level: 75, icon: 'fab fa-microsoft', category: 'web' },
+    { name: 'WordPress', level: 82, icon: 'fab fa-wordpress', category: 'web' },
+    { name: 'HTML5/CSS3', level: 95, icon: 'fab fa-html5', category: 'web' },
+    { name: 'React Native', level: 75, icon: 'fab fa-react', category: 'web' },
+    { name: 'PHP', level: 78, icon: 'fab fa-php', category: 'web' },
     
     // Cloud & DevOps
-    { name: 'Docker', level: 80, icon: 'fab fa-docker', category: 'cloud' },
-    { name: 'Kubernetes', level: 70, icon: 'fas fa-dharmachakra', category: 'cloud' },
-    { name: 'OpenStack', level: 75, icon: 'fas fa-cloud', category: 'cloud' },
-    { name: 'Jenkins', level: 70, icon: 'fab fa-jenkins', category: 'cloud' },
+    { name: 'OpenStack', level: 88, icon: 'fas fa-cloud', category: 'cloud' },
+    { name: 'Docker', level: 85, icon: 'fab fa-docker', category: 'cloud' },
+    { name: 'Kubernetes', level: 80, icon: 'fas fa-dharmachakra', category: 'cloud' },
+    { name: 'Ansible', level: 78, icon: 'fas fa-cogs', category: 'cloud' },
+    { name: 'Jenkins', level: 75, icon: 'fas fa-tools', category: 'cloud' },
+    { name: 'Prometheus', level: 72, icon: 'fas fa-chart-area', category: 'cloud' },
+    { name: 'Grafana', level: 70, icon: 'fas fa-chart-line', category: 'cloud' },
+    { name: 'Heat', level: 78, icon: 'fas fa-fire', category: 'cloud' },
+    { name: 'Helm', level: 70, icon: 'fas fa-ship', category: 'cloud' },
     
     // Databases & BI
-    { name: 'SQL Server', level: 80, icon: 'fas fa-database', category: 'database' },
-    { name: 'MongoDB', level: 75, icon: 'fas fa-leaf', category: 'database' },
-    { name: 'Power BI', level: 85, icon: 'fas fa-chart-bar', category: 'database' },
+    { name: 'SQL Server', level: 85, icon: 'fas fa-database', category: 'database' },
+    { name: 'MongoDB', level: 80, icon: 'fas fa-leaf', category: 'database' },
+    { name: 'Power BI', level: 88, icon: 'fas fa-chart-line', category: 'database' },
+    { name: 'phpMyAdmin', level: 82, icon: 'fas fa-database', category: 'database' },
+    { name: 'Excel', level: 90, icon: 'fas fa-file-excel', category: 'database' },
     
     // Tools
     { name: 'Git', level: 90, icon: 'fab fa-git-alt', category: 'tools' },
-    { name: 'Linux', level: 85, icon: 'fab fa-linux', category: 'tools' },
-    { name: 'Photoshop', level: 70, icon: 'fas fa-palette', category: 'tools' }
+    { name: 'Linux/Ubuntu', level: 85, icon: 'fab fa-ubuntu', category: 'tools' },
+    { name: 'Selenium', level: 82, icon: 'fas fa-robot', category: 'tools' },
+    { name: 'Samba', level: 78, icon: 'fas fa-folder-open', category: 'tools' },
+    { name: 'Packet Tracer', level: 75, icon: 'fas fa-network-wired', category: 'tools' },
+    { name: 'Odoo', level: 72, icon: 'fas fa-shopping-cart', category: 'tools' }
   ];
 
   skillCategories = [

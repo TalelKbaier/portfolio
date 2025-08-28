@@ -16,7 +16,7 @@
   // Border Colors
   --border-color: #e2e8f0;
   --border-secondary: #cbd5e1;
-  --border-focus: #6366f1;
+  --border-focus: #b8860b;
   
   // Shadow Colors
   --shadow-color: rgba(0, 0, 0, 0.1);
@@ -27,6 +27,12 @@
   --surface-color: #ffffff;
   --surface-hover: #f8fafc;
   --surface-active: #f1f5f9;
+  
+  // Primary Colors - Plus foncé pour le mode clair
+  --primary-color: #b8860b;
+  --primary-light: #daa520;
+  --primary-dark: #996b00;
+  --primary-gradient: linear-gradient(135deg, #b8860b 0%, #daa520 100%);
 }
 
 // Dark Theme
@@ -46,7 +52,7 @@
   // Border Colors
   --border-color: #334155;
   --border-secondary: #475569;
-  --border-focus: #8b5cf6;
+  --border-focus: #f7ba23;
   
   // Shadow Colors
   --shadow-color: rgba(0, 0, 0, 0.3);
@@ -58,10 +64,11 @@
   --surface-hover: #334155;
   --surface-active: #475569;
   
-  // Adjust primary colors for dark theme
-  --primary-color: #8b5cf6;
-  --primary-color-dark: #7c3aed;
-  --primary-gradient: linear-gradient(135deg, #8b5cf6 0%, #a855f7 100%);
+  // Adjust primary colors for dark theme - Couleur #f7ba23 comme demandé
+  --primary-color: #f7ba23;
+  --primary-light: #fbbf24;
+  --primary-dark: #d97706;
+  --primary-gradient: linear-gradient(135deg, #f7ba23 0%, #fbbf24 100%);
 }
 
 // Theme-specific component adjustments
@@ -275,16 +282,17 @@ body {
     --text-muted: #64748b;
     --border-color: #334155;
     --border-secondary: #475569;
-    --border-focus: #8b5cf6;
+    --border-focus: #f7ba23;
     --shadow-color: rgba(0, 0, 0, 0.3);
     --shadow-color-light: rgba(0, 0, 0, 0.2);
     --shadow-color-dark: rgba(0, 0, 0, 0.4);
     --surface-color: #1e293b;
     --surface-hover: #334155;
     --surface-active: #475569;
-    --primary-color: #8b5cf6;
-    --primary-color-dark: #7c3aed;
-    --primary-gradient: linear-gradient(135deg, #8b5cf6 0%, #a855f7 100%);
+    --primary-color: #f7ba23;
+    --primary-light: #fbbf24;
+    --primary-dark: #d97706;
+    --primary-gradient: linear-gradient(135deg, #f7ba23 0%, #fbbf24 100%);
   }
 }
 

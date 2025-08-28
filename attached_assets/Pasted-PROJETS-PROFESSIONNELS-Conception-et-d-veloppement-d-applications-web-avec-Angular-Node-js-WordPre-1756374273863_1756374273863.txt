@@ -1,0 +1,37 @@
+PROJETS PROFESSIONNELS
+Conception et développement d’applications web avec Angular, Node.js, WordPress, SQL Server et phpMyAdmin.
+Développement d’applications desktop en Python avec Selenium pour l’automatisation de la récupération de données.
+Mise en place d’un partage de dossiers Samba sous Ubuntu et configuration d’une tâche cron pour la synchronisation régulière des fichiers.
+Création de tableaux de bord et analyse de la performance technique d’un programme de réassurance à l’aide de Power BI Desktop et Excel.
+EXPÉRIENCES PROFESSIONNELLES
+2023 - Present
+Développeur
+Conception, développement et déploiement d’applications, mise en place d’infrastructures serveur sous Ubuntu et automatisation de processus métier pour optimiser la performance et la productivité.
+EDUCATION
+2020-2022
+Faculté des Sciences Economiques et de Gestion De Tunis FSEGT
+Licence en Business Intelligence (BI)
+Assurance COMAR
+Business Analytics (Stage PFE 5 mois )
+2022-PRESENT
+École Sup Privée d'Ingénierie et de Technologies ESPRIT
+Ingénierie en informatique | Cours du soir
+Spécialité: Cloud Computing et Architecture informatique
+2019-2020
+Institut supérieur d'informatique de Mahdia ISIMA
+1ère année en Business Computing
+2018-2019
+Baccalauréat en Sciences Techniques, Lycée Bardo
+PROJETS ACADÉMIQUES
+Déploiement d’une infrastructure cloud avec OpenStack et automatisation de la création d’instances via Heat.
+Mise en place d’un cluster Kubernetes automatisé avec Ansible, supervisé avec Prometheus et Grafana via Helm.
+Mise en place d’un cluster Docker Swarm et conteneurisation d’une application web, avec garantie de haute disponibilité.
+Mise en place d’un pipeline CI/CD avec Jenkins.
+Configuration réseau : routage IP, VLAN, sécurisation des ports, adressage IP statique et dynamique, routage dynamique (réalisée avec Cisco Packet Tracer).
+Développement d’applications web avec React, .NET et MongoDB, ainsi que d’une application mobile avec React Native.
+Création de sites e-commerce avec Odoo.
+Analyse, nettoyage et structuration de données, création de tableaux et indicateurs de suivi pour optimiser la prise de décision et la performance.
+2022
+Freelance
+2021
+Développeur WordPress

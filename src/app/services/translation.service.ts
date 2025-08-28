@@ -8,7 +8,7 @@ export class TranslationService {
   private _currentLanguage = new BehaviorSubject<string>('fr');
   public currentLanguage$ = this._currentLanguage.asObservable();
   
-  private translations: { [key: string]: { [key: string]: string } } = {};
+  private translations: { [key: string]: any } = {};
 
   get currentLanguage(): string {
     return this._currentLanguage.value;
@@ -21,31 +21,51 @@ export class TranslationService {
   async loadTranslations(): Promise<void> {
     try {
       // Load French translations
-      const frResponse = await fetch('/src/assets/i18n/fr.json');
+      const frResponse = await fetch('assets/i18n/fr.json');
       this.translations['fr'] = await frResponse.json();
       
       // Load English translations
-      const enResponse = await fetch('/src/assets/i18n/en.json');
+      const enResponse = await fetch('assets/i18n/en.json');
       this.translations['en'] = await enResponse.json();
     } catch (error) {
       console.error('Error loading translations:', error);
-      // Fallback translations
+      // Fallback translations avec structure hiérarchique
       this.translations = {
         'fr': {
-          'nav.home': 'Accueil',
-          'nav.about': 'À propos',
-          'nav.skills': 'Compétences',
-          'nav.experience': 'Expérience',
-          'nav.projects': 'Projets',
-          'nav.contact': 'Contact'
+          nav: {
+            home: 'Accueil',
+            about: 'À propos',
+            skills: 'Compétences',
+            experience: 'Expérience',
+            projects: 'Projets',
+            contact: 'Contact'
+          },
+          skills: {
+            title: 'Compétences & Expertise',
+            subtitle: 'Technologies et outils que j\'utilise'
+          },
+          experience: {
+            title: 'Expérience & Formation',
+            subtitle: 'Mon parcours professionnel'
+          }
         },
         'en': {
-          'nav.home': 'Home',
-          'nav.about': 'About',
-          'nav.skills': 'Skills',
-          'nav.experience': 'Experience',
-          'nav.projects': 'Projects',
-          'nav.contact': 'Contact'
+          nav: {
+            home: 'Home',
+            about: 'About',
+            skills: 'Skills',
+            experience: 'Experience',
+            projects: 'Projects',
+            contact: 'Contact'
+          },
+          skills: {
+            title: 'Skills & Expertise',
+            subtitle: 'Technologies and tools I work with'
+          },
+          experience: {
+            title: 'Experience & Education',
+            subtitle: 'My professional journey'
+          }
         }
       };
     }
@@ -69,8 +89,15 @@ export class TranslationService {
   }
 
   translate(key: string): string {
-    const translation = this.translations[this.currentLanguage]?.[key];
-    return translation || key;
+    const keys = key.split('.');
+    let translation: any = this.translations[this.currentLanguage];
+    
+    for (const k of keys) {
+      translation = translation?.[k];
+      if (!translation) break;
+    }
+    
+    return (typeof translation === 'string' ? translation : key);
   }
 
   toggleLanguage(): void {
