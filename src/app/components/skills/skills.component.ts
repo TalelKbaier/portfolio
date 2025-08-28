@@ -90,6 +90,19 @@ export class SkillsComponent implements OnInit {
     return this.skills.filter(skill => skill.category === this.activeCategory);
   }
 
+  getSkillsByCategory(): { [key: string]: Skill[] } {
+    const grouped: { [key: string]: Skill[] } = {};
+    this.skillCategories.forEach(category => {
+      grouped[category.key] = this.skills.filter(skill => skill.category === category.key);
+    });
+    return grouped;
+  }
+
+  getCategoryTitle(categoryKey: string): string {
+    const category = this.skillCategories.find(cat => cat.key === categoryKey);
+    return this.translate('skills.' + categoryKey);
+  }
+
   setActiveCategory(category: string) {
     this.activeCategory = category;
     // Re-animate skill bars when category changes

@@ -11,32 +11,32 @@
       <!-- Desktop Navigation -->
       <ul class="nav-menu" [class.active]="isMenuOpen">
         <li class="nav-item">
-          <a href="#home" class="nav-link" (click)="scrollToSection('home')">
+          <a href="#home" class="nav-link" (click)="scrollToSection('home')" [class.active]="activeSection === 'home'">
             {{ translate('nav.home') }}
           </a>
         </li>
         <li class="nav-item">
-          <a href="#about" class="nav-link" (click)="scrollToSection('about')">
+          <a href="#about" class="nav-link" (click)="scrollToSection('about')" [class.active]="activeSection === 'about'">
             {{ translate('nav.about') }}
           </a>
         </li>
         <li class="nav-item">
-          <a href="#skills" class="nav-link" (click)="scrollToSection('skills')">
+          <a href="#skills" class="nav-link" (click)="scrollToSection('skills')" [class.active]="activeSection === 'skills'">
             {{ translate('nav.skills') }}
           </a>
         </li>
         <li class="nav-item">
-          <a href="#experience" class="nav-link" (click)="scrollToSection('experience')">
+          <a href="#experience" class="nav-link" (click)="scrollToSection('experience')" [class.active]="activeSection === 'experience'">
             {{ translate('nav.experience') }}
           </a>
         </li>
         <li class="nav-item">
-          <a href="#projects" class="nav-link" (click)="scrollToSection('projects')">
+          <a href="#projects" class="nav-link" (click)="scrollToSection('projects')" [class.active]="activeSection === 'projects'">
             {{ translate('nav.projects') }}
           </a>
         </li>
         <li class="nav-item">
-          <a href="#contact" class="nav-link" (click)="scrollToSection('contact')">
+          <a href="#contact" class="nav-link" (click)="scrollToSection('contact')" [class.active]="activeSection === 'contact'">
             {{ translate('nav.contact') }}
           </a>
         </li>

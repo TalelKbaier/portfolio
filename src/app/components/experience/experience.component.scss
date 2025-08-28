@@ -50,11 +50,29 @@
   gap: 0.5rem;
   margin-bottom: 4rem;
   background: var(--bg-tertiary);
-  padding: 0.5rem;
+  padding: 1rem;
   border-radius: 30px;
-  max-width: 700px;
+  max-width: 800px;
   margin: 0 auto 4rem auto;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border: 2px solid var(--border-color);
+  position: relative;
+  
+  &::before {
+    content: '👆 Cliquez pour voir plus d\'expériences';
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary-color);
+    color: #1e293b;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    white-space: nowrap;
+    animation: pulse 2s infinite;
+  }
 
   .tab-button {
     display: flex;
@@ -334,6 +352,12 @@
       }
     }
   }
+}
+
+@keyframes pulse {
+  0% { transform: translateX(-50%) scale(1); }
+  50% { transform: translateX(-50%) scale(1.05); }
+  100% { transform: translateX(-50%) scale(1); }
 }
 
 // Responsive design

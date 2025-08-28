@@ -15,6 +15,7 @@ export class HeaderComponent implements OnInit {
   isScrolled = false;
   currentTheme = 'light';
   currentLanguage = 'fr';
+  activeSection = 'home';
 
   constructor(
     private themeService: ThemeService,
@@ -34,6 +35,25 @@ export class HeaderComponent implements OnInit {
   @HostListener('window:scroll', [])
   onWindowScroll() {
     this.isScrolled = window.pageYOffset > 50;
+    this.updateActiveSection();
+  }
+
+  private updateActiveSection() {
+    const sections = ['home', 'about', 'skills', 'experience', 'projects', 'contact'];
+    const scrollPosition = window.pageYOffset + 100;
+
+    for (const section of sections) {
+      const element = document.getElementById(section);
+      if (element) {
+        const offsetTop = element.offsetTop;
+        const offsetHeight = element.offsetHeight;
+        
+        if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+          this.activeSection = section;
+          break;
+        }
+      }
+    }
   }
 
   toggleMenu() {

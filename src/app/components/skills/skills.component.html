@@ -22,8 +22,49 @@
       </button>
     </div>
 
-    <!-- Skills Grid -->
-    <div class="skills-grid" data-aos="fade-up" data-aos-delay="400">
+    <!-- Skills Grid - Organized by Categories when showing all -->
+    <div *ngIf="activeCategory === 'all'" class="skills-organized" data-aos="fade-up" data-aos-delay="400">
+      <div *ngFor="let category of skillCategories; let catIndex = index" class="skills-category-group">
+        <div class="category-header" [attr.data-aos]="'fade-right'" [attr.data-aos-delay]="catIndex * 200">
+          <h3 class="category-title">
+            <i class="fas fa-code" *ngIf="category.key === 'programming'"></i>
+            <i class="fas fa-globe" *ngIf="category.key === 'web'"></i>
+            <i class="fas fa-cloud" *ngIf="category.key === 'cloud'"></i>
+            <i class="fas fa-database" *ngIf="category.key === 'database'"></i>
+            <i class="fas fa-tools" *ngIf="category.key === 'tools'"></i>
+            {{ getCategoryTitle(category.key) }}
+          </h3>
+        </div>
+        <div class="skills-grid category-grid">
+          <div 
+            *ngFor="let skill of getSkillsByCategory()[category.key]; let i = index"
+            class="skill-item"
+            [attr.data-aos]="'zoom-in'"
+            [attr.data-aos-delay]="(catIndex * 200) + (i * 50)">
+            
+            <div class="skill-header">
+              <div class="skill-icon">
+                <i [class]="skill.icon"></i>
+              </div>
+              <div class="skill-info">
+                <h4 class="skill-name">{{ skill.name }}</h4>
+                <span class="skill-level">{{ skill.level }}%</span>
+              </div>
+            </div>
+
+            <div class="skill-progress">
+              <div 
+                class="skill-progress-fill"
+                [style.width.%]="0">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Skills Grid - Regular view for specific categories -->
+    <div *ngIf="activeCategory !== 'all'" class="skills-grid" data-aos="fade-up" data-aos-delay="400">
       <div 
         *ngFor="let skill of getFilteredSkills(); let i = index"
         class="skill-item"
