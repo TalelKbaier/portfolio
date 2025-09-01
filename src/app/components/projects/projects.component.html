@@ -1,57 +1,10 @@
 <section id="projects" class="projects-section">
   <div class="container">
-    <div class="section-header" data-aos="fade-up">
+    <!-- <div class="section-header" data-aos="fade-up">
       <h2 class="section-title">{{ translate('projects.title') }}</h2>
       <p class="section-subtitle">{{ translate('projects.subtitle') }}</p>
-    </div>
+    </div> -->
 
-    <!-- Featured Projects -->
-    <div class="featured-projects" data-aos="fade-up" data-aos-delay="200">
-      <h3 class="featured-title">{{ translate('projects.featured') }}</h3>
-      <div class="featured-grid">
-        <div 
-          *ngFor="let project of getFeaturedProjects(); let i = index"
-          class="featured-project"
-          [attr.data-aos]="'zoom-in'"
-          [attr.data-aos-delay]="i * 200">
-          
-          <div class="project-image">
-            <div class="image-placeholder">
-              <i class="fas fa-code"></i>
-            </div>
-            <div class="project-overlay">
-              <div class="project-actions">
-                <a *ngIf="project.link" [href]="project.link" class="action-btn" target="_blank">
-                  <i class="fas fa-external-link-alt"></i>
-                </a>
-                <a *ngIf="project.github" [href]="project.github" class="action-btn" target="_blank">
-                  <i class="fab fa-github"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="project-content">
-            <div class="project-header">
-              <h4 class="project-title">{{ project.title }}</h4>
-              <span class="project-status" [class]="getStatusClass(project.status)">
-                {{ getStatusText(project.status) }}
-              </span>
-            </div>
-            
-            <p class="project-description">{{ project.description }}</p>
-            
-            <div class="project-technologies">
-              <span 
-                *ngFor="let tech of project.technologies"
-                class="tech-tag">
-                {{ tech }}
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <!-- Category Filter -->
     <div class="category-filter" data-aos="fade-up" data-aos-delay="400">
@@ -75,11 +28,8 @@
         <div class="card-image">
           <div class="image-placeholder">
             <i class="fas" 
-               [class.fa-globe]="project.category === 'web'"
-               [class.fa-cloud]="project.category === 'cloud'"
-               [class.fa-chart-bar]="project.category === 'data'"
-               [class.fa-mobile-alt]="project.category === 'mobile'"
-               [class.fa-robot]="project.category === 'ai'"></i>
+               [class.fa-briefcase]="project.category === 'professional'"
+               [class.fa-graduation-cap]="project.category === 'academic'"></i>
           </div>
           <div class="card-overlay">
             <div class="card-actions">

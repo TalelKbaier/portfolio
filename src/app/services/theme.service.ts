@@ -5,7 +5,7 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class ThemeService {
-  private _currentTheme = new BehaviorSubject<string>('light');
+  private _currentTheme = new BehaviorSubject<string>('dark');
   public currentTheme$ = this._currentTheme.asObservable();
 
   get currentTheme(): string {
@@ -15,14 +15,13 @@ export class ThemeService {
   constructor() {}
 
   initializeTheme(): void {
-    // Check for saved theme preference or default to system preference
+    // Check for saved theme preference or default to dark mode
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
       this.setTheme(savedTheme);
     } else {
-      // Detect system preference
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      this.setTheme(prefersDark ? 'dark' : 'light');
+      // Default to dark mode
+      this.setTheme('dark');
     }
 
     // Listen for system theme changes

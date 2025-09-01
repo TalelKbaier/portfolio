@@ -38,15 +38,15 @@ export class ContactComponent implements OnInit {
     {
       icon: 'fab fa-linkedin',
       title: 'LinkedIn',
-      value: 'Talel Khaldi',
-      link: 'https://linkedin.com/in/talel-khaldi',
+      value: 'Talel Kbaier',
+      link: 'https://linkedin.com/in/talel-kbaier',
       color: '#0077b5'
     },
     {
       icon: 'fab fa-github',
       title: 'GitHub',
-      value: 'talel-khaldi',
-      link: 'https://github.com/talel-khaldi',
+      value: 'talel-kbaier',
+      link: 'https://github.com/talel-kbaier',
       color: '#333'
     }
   ];
@@ -115,8 +115,8 @@ export class ContactComponent implements OnInit {
   downloadCV() {
     // Create a mock CV download - in real implementation, this would download an actual PDF
     const link = document.createElement('a');
-    link.href = 'data:text/plain;charset=utf-8,CV - Talel Khaldi - Développeur Cloud & Web';
-    link.download = 'CV_Talel_Khaldi.pdf';
+    link.href = 'data:text/plain;charset=utf-8,CV - Talel Kbaier - Développeur Cloud & Web';
+    link.download = 'CV_Talel_Kbaier.pdf';
     link.click();
   }
 }

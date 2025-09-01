@@ -24,69 +24,102 @@ interface Project {
 export class ProjectsComponent implements OnInit {
   
   projects: Project[] = [
+    // Projets Professionnels
     {
-      title: 'E-commerce Platform',
-      description: 'Plateforme e-commerce complète avec gestion des commandes, paiements et tableau de bord administrateur.',
-      technologies: ['Angular', 'Spring Boot', 'PostgreSQL', 'Docker'],
-      category: 'web',
+      title: 'Applications Web Modernes',
+      description: 'Conception et développement d\'applications web avec Angular, Node.js, WordPress, SQL Server et phpMyAdmin.',
+      technologies: ['Angular', 'Node.js', 'WordPress', 'SQL Server', 'phpMyAdmin'],
+      category: 'professional',
       status: 'completed',
-      featured: true,
-      github: '#'
+      featured: false
     },
     {
-      title: 'Cloud Infrastructure Automation',
-      description: 'Automatisation du déploiement d\'infrastructures cloud avec Ansible et Terraform.',
-      technologies: ['Ansible', 'Terraform', 'AWS', 'Docker', 'Jenkins'],
-      category: 'cloud',
+      title: 'Automatisation Desktop Python',
+      description: 'Développement d\'applications desktop en Python avec Selenium pour l\'automatisation de la récupération de données.',
+      technologies: ['Python', 'Selenium', 'Desktop Development'],
+      category: 'professional',
       status: 'completed',
-      featured: true,
-      github: '#'
+      featured: false
     },
     {
-      title: 'Business Intelligence Dashboard',
-      description: 'Tableau de bord BI pour l\'analyse des données de ventes et la visualisation des KPIs.',
-      technologies: ['Power BI', 'SQL Server', 'Python', 'DAX'],
-      category: 'data',
+      title: 'Infrastructure Samba & Synchronisation',
+      description: 'Mise en place d\'un partage de dossiers Samba sous Ubuntu et configuration d\'une tâche cron pour la synchronisation régulière des fichiers.',
+      technologies: ['Ubuntu', 'Samba', 'Cron', 'Linux'],
+      category: 'professional',
       status: 'completed',
-      featured: true,
-      link: '#'
+      featured: false
     },
     {
-      title: 'Mobile App React Native',
-      description: 'Application mobile cross-platform pour la gestion de tâches avec synchronisation cloud.',
-      technologies: ['React Native', 'Node.js', 'MongoDB', 'Firebase'],
-      category: 'mobile',
-      status: 'in-progress',
-      featured: false,
-      github: '#'
-    },
-    {
-      title: 'Microservices Architecture',
-      description: 'Architecture microservices pour une application de gestion d\'entreprise.',
-      technologies: ['Spring Boot', 'Docker', 'Kubernetes', 'Redis'],
-      category: 'cloud',
+      title: 'Tableaux de Bord BI',
+      description: 'Création de tableaux de bord et analyse de la performance technique d\'un programme de réassurance à l\'aide de Power BI Desktop et Excel.',
+      technologies: ['Power BI', 'Excel', 'Business Intelligence', 'Réassurance'],
+      category: 'professional',
       status: 'completed',
-      featured: false,
-      github: '#'
+      featured: false
+    },
+    // Projets Académiques
+    {
+      title: 'Infrastructure Cloud OpenStack',
+      description: 'Déploiement d\'une infrastructure cloud avec OpenStack et automatisation de la création d\'instances via Heat.',
+      technologies: ['OpenStack', 'Heat', 'Cloud Computing'],
+      category: 'academic',
+      status: 'completed',
+      featured: false
     },
     {
-      title: 'AI Chatbot Integration',
-      description: 'Intégration d\'un chatbot IA pour le support client avec traitement du langage naturel.',
-      technologies: ['Python', 'TensorFlow', 'Node.js', 'WebSocket'],
-      category: 'ai',
-      status: 'in-progress',
-      featured: false,
-      github: '#'
+      title: 'Cluster Kubernetes Automatisé',
+      description: 'Mise en place d\'un cluster Kubernetes automatisé avec Ansible, supervisé avec Prometheus et Grafana via Helm.',
+      technologies: ['Kubernetes', 'Ansible', 'Prometheus', 'Grafana', 'Helm'],
+      category: 'academic',
+      status: 'completed',
+      featured: false
+    },
+    {
+      title: 'Docker Swarm & Haute Disponibilité',
+      description: 'Mise en place d\'un cluster Docker Swarm et conteneurisation d\'une application web, avec garantie de haute disponibilité.',
+      technologies: ['Docker Swarm', 'Containerization', 'High Availability'],
+      category: 'academic',
+      status: 'completed',
+      featured: false
+    },
+    {
+      title: 'Pipeline CI/CD Jenkins',
+      description: 'Mise en place d\'un pipeline CI/CD avec Jenkins.',
+      technologies: ['Jenkins', 'CI/CD', 'DevOps'],
+      category: 'academic',
+      status: 'completed',
+      featured: false
+    },
+    {
+      title: 'Configuration Réseau Avancée',
+      description: 'Configuration réseau : routage IP, VLAN, sécurisation des ports, adressage IP statique et dynamique, routage dynamique (réalisée avec Cisco Packet Tracer).',
+      technologies: ['Cisco Packet Tracer', 'VLAN', 'Routing', 'Network Security'],
+      category: 'academic',
+      status: 'completed',
+      featured: false
+    },
+    {
+      title: 'Applications Web Modernes',
+      description: 'Développement d\'applications web avec React, .NET et MongoDB, ainsi que d\'une application mobile avec React Native.',
+      technologies: ['React', '.NET', 'MongoDB', 'React Native'],
+      category: 'academic',
+      status: 'completed',
+      featured: false
+    },
+    {
+      title: 'Sites E-commerce Odoo',
+      description: 'Création de sites e-commerce avec Odoo.',
+      technologies: ['Odoo', 'E-commerce', 'ERP'],
+      category: 'academic',
+      status: 'completed',
+      featured: false
     }
   ];
 
   projectCategories = [
     { key: 'all', name: 'Tous les projets' },
-    { key: 'web', name: 'Web Development' },
-    { key: 'cloud', name: 'Cloud & DevOps' },
-    { key: 'data', name: 'Data & BI' },
-    { key: 'mobile', name: 'Mobile' },
-    { key: 'ai', name: 'AI & ML' }
+    { key: 'professional', name: 'Projets Professionnels' },
+    { key: 'academic', name: 'Projets Académiques' }
   ];
 
   activeCategory = 'all';
