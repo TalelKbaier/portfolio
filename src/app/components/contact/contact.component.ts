@@ -39,14 +39,14 @@ export class ContactComponent implements OnInit {
       icon: 'fab fa-linkedin',
       title: 'LinkedIn',
       value: 'Talel Kbaier',
-      link: 'https://linkedin.com/in/talel-kbaier',
+      link: 'https://linkedin.com/in/talel-kb',
       color: '#0077b5'
     },
     {
       icon: 'fab fa-github',
       title: 'GitHub',
       value: 'talel-kbaier',
-      link: 'https://github.com/talel-kbaier',
+      link: 'https://github.com/talel-kb',
       color: '#333'
     }
   ];

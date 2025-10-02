@@ -77,7 +77,7 @@ export class ProjectsComponent implements OnInit {
     {
       title: 'Docker Swarm & Haute Disponibilité',
       description: 'Mise en place d\'un cluster Docker Swarm et conteneurisation d\'une application web, avec garantie de haute disponibilité.',
-      technologies: ['Docker Swarm', 'Containerization', 'High Availability'],
+      technologies: ['Docker Swarm', 'Containerization'],
       category: 'academic',
       status: 'completed',
       featured: false

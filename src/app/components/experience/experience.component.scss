@@ -46,71 +46,54 @@
 .experience-tabs {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 4rem;
-  background: var(--bg-tertiary);
-  padding: 1rem;
-  border-radius: 30px;
-  max-width: 800px;
-  margin: 0 auto 4rem auto;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-  border: 2px solid var(--border-color);
+  gap: 1.2em;
+  margin-bottom: 2em;
+}
+
+.tab-button {
+  font-weight: bold;
+  font-size: 1.08em;
+  padding: 0.5em 1.6em;
+  border-radius: 2em;
+  border: 2px solid #b8860b;
+  background: #22223b;
+  color: #f7ba23;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
+  outline: none;
   position: relative;
-  
-  &::before {
-    content: '👆 Cliquez pour voir plus d\'expériences';
-    position: absolute;
-    top: -35px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--primary-color);
-    color: #1e293b;
-    padding: 6px 12px;
-    border-radius: 15px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    white-space: nowrap;
-    animation: pulse 2s infinite;
+
+  &:not(.active) {
+    animation: tab-glow 1.2s ease-in-out infinite alternate;
   }
 
-  .tab-button {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 12px 18px;
-    background: transparent;
-    border: none;
-    border-radius: 25px;
-    color: var(--text-secondary);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-weight: 600;
-    font-size: 0.85rem;
-    position: relative;
-    flex: 1;
-    min-width: 110px;
+  &:not(.active):hover {
+    background: #b8860b;
+    color: #fff;
+    transform: scale(1.07);
+    box-shadow: 0 4px 18px rgba(184, 134, 11, 0.18);
+  }
 
-    &:hover {
-      color: var(--primary-color);
-      background: var(--bg-color);
-      transform: translateY(-1px);
-    }
+  &.active {
+    background: linear-gradient(90deg, #b8860b 60%, #f7ba23 100%);
+    color: #fff;
+    box-shadow: 0 4px 18px rgba(184, 134, 11, 0.22);
+    border: 2px solid #fff;
+    animation: none;
+  }
 
-    &.active {
-      background: var(--primary-color);
-      color: #1e293b;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      transform: translateY(-1px);
-      
-      i {
-        color: #1e293b;
-      }
-    }
+  i {
+    font-size: 0.9rem;
+  }
+}
 
-    i {
-      font-size: 0.9rem;
-    }
+@keyframes tab-glow {
+  0% {
+    box-shadow: 0 0 0 0 #f7ba23;
+  }
+  100% {
+    box-shadow: 0 0 16px 4px #f7ba23;
   }
 }
 
@@ -193,11 +176,12 @@
 
     .timeline-card {
       background: var(--bg-secondary);
-      border-radius: 15px;
-      padding: 2rem;
+      border-radius: 12px;
+      padding: 1.1rem 1rem;
       border: 1px solid var(--border-color);
       transition: all 0.3s ease;
       position: relative;
+      font-size: 0.97em;
 
       &:hover {
         transform: translateY(-5px);
@@ -215,7 +199,7 @@
       }
 
       .card-header {
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
 
         .card-date {
           display: inline-block;
@@ -229,14 +213,14 @@
         }
 
         .card-title {
-          font-size: 1.4rem;
+          font-size: 1.1rem;
           font-weight: 600;
           color: var(--text-color);
           margin-bottom: 0.5rem;
         }
 
         .card-company {
-          font-size: 1.1rem;
+          font-size: 0.98rem;
           color: var(--primary-color);
           font-weight: 500;
           margin-bottom: 0.5rem;
@@ -263,22 +247,21 @@
 
       .card-body {
         .card-description {
-          color: var(--text-secondary);
-          line-height: 1.6;
-          margin-bottom: 1.5rem;
+          font-size: 0.97em;
+          margin-bottom: 1rem;
         }
 
         .card-technologies {
           display: flex;
           flex-wrap: wrap;
-          gap: 0.5rem;
+          gap: 0.3rem;
 
           .tech-tag {
             background: var(--primary-color);
             color: white;
-            padding: 4px 12px;
+            padding: 2px 8px;
             border-radius: 15px;
-            font-size: 0.8rem;
+            font-size: 0.78em;
             font-weight: 500;
             opacity: 0.9;
           }
@@ -354,12 +337,6 @@
   }
 }
 
-@keyframes pulse {
-  0% { transform: translateX(-50%) scale(1); }
-  50% { transform: translateX(-50%) scale(1.05); }
-  100% { transform: translateX(-50%) scale(1); }
-}
-
 // Responsive design
 @media (max-width: 968px) {
   .timeline {
@@ -416,7 +393,7 @@
     .tab-button {
       padding: 12px 20px;
       font-size: 0.9rem;
-      
+
       span {
         display: none;
       }
@@ -425,11 +402,12 @@
 
   .timeline-item {
     .timeline-card {
-      padding: 1.5rem;
+      padding: 0.7rem 0.5rem;
+      font-size: 0.92em;
 
       .card-header {
         .card-title {
-          font-size: 1.2rem;
+          font-size: 1.1rem;
         }
       }
     }
