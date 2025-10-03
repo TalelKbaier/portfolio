@@ -59,8 +59,19 @@
               class="tech-tag">
               {{ tech }}
             </span>
-            <span *ngIf="project.technologies.length > 3" class="tech-more">
+            <span *ngIf="project.technologies.length > 3" 
+                  class="tech-more"
+                  (mouseenter)="showMoreIndex = i"
+                  (mouseleave)="showMoreIndex = null"
+                  (click)="showMoreIndex = showMoreIndex === i ? null : i"
+                  style="position:relative;cursor:pointer;">
               +{{ project.technologies.length - 3 }}
+              <div class="tech-more-popup" 
+                   *ngIf="showMoreIndex === i"
+                   (mouseleave)="showMoreIndex = null"
+                   style="position:absolute;left:0;top:120%;z-index:10;min-width:120px;">
+                <span *ngFor="let tech of project.technologies.slice(3)" class="tech-tag tech-tag-popup">{{ tech }}</span>
+              </div>
             </span>
           </div>
         </div>

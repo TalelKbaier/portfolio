@@ -1,3 +1,40 @@
+.tech-more {
+  background: #222;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-left: 4px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.18s;
+  &:hover {
+    background: var(--primary-color);
+  }
+}
+
+.tech-more-popup {
+  background: #222;
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+  padding: 8px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  min-width: 120px;
+  margin-top: 2px;
+}
+
+.tech-tag-popup {
+  background: var(--primary-color);
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 10px;
+  font-size: 0.78rem;
+  font-weight: 500;
+}
 .projects-section {
   padding: 100px 0;
   background: var(--bg-secondary);

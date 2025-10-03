@@ -22,13 +22,15 @@ interface Project {
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent implements OnInit {
+
+  showMoreIndex: number | null = null;
   
   projects: Project[] = [
     // Projets Professionnels
     {
       title: 'Applications Web Modernes',
-      description: 'Conception et développement d\'applications web avec Angular, Node.js, WordPress, SQL Server et phpMyAdmin.',
-      technologies: ['Angular', 'Node.js', 'WordPress', 'SQL Server', 'phpMyAdmin'],
+      description: 'Conception et développement d\'applications web avec Angular, .NET, Node.js, WordPress, SQL Server et phpMyAdmin.',
+      technologies: ['Angular', 'Node.js', 'WordPress', 'SQL Server', 'phpMyAdmin', '.NET'],
       category: 'professional',
       status: 'completed',
       featured: false
