@@ -72,19 +72,11 @@ export class ContactComponent implements OnInit {
 
   onSubmit() {
     if (this.isValidForm()) {
-      this.isSubmitting = true;
-      
-      // Simulate form submission
-      setTimeout(() => {
-        this.isSubmitting = false;
-        this.submitSuccess = true;
-        this.resetForm();
-        
-        // Hide success message after 5 seconds
-        setTimeout(() => {
-          this.submitSuccess = false;
-        }, 5000);
-      }, 2000);
+      const subject = encodeURIComponent(this.formData.subject);
+      const body = encodeURIComponent(
+        `Nom: ${this.formData.name}\nEmail: ${this.formData.email}\n\n${this.formData.message}`
+      );
+      window.location.href = `mailto:k.talel99@gmail.com?subject=${subject}&body=${body}`;
     }
   }
 
@@ -113,10 +105,6 @@ export class ContactComponent implements OnInit {
   }
 
   downloadCV() {
-    // Create a mock CV download - in real implementation, this would download an actual PDF
-    const link = document.createElement('a');
-    link.href = 'data:text/plain;charset=utf-8,CV - Talel Kbaier - Développeur Cloud & Web';
-    link.download = 'CV_Talel_Kbaier.pdf';
-    link.click();
+    window.open('assets/cv/Talel_KBAIER_cvFr.pdf', '_blank');
   }
 }
