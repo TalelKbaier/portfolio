@@ -9,8 +9,8 @@
   },
   "home": {
     "greeting": "Hello, I'm",
-    "role": "Cloud Engineer & Web Developer",
-    "description": "As an engineering student in Cloud Computing and active developer, I distinguish myself through my ability to quickly learn and adapt to various technical environments, from development to cloud architecture, including BI.",
+    "role": "IT Engineer — Cloud & DevOps",
+    "description": "IT engineer specialized in Cloud and DevOps, with experience in full stack development, automation, CI/CD and the deployment of Linux/Cloud infrastructures. I cover the entire application lifecycle, from design to deployment and monitoring.",
     "downloadCV": "Download CV",
     "contactMe": "Contact Me",
     "scrollDown": "Scroll Down"
@@ -18,13 +18,13 @@
   "about": {
     "title": "About Me",
     "subtitle": "Get to know me better",
-    "description": "As an engineering student in Cloud Computing and active developer, I distinguish myself through my ability to quickly learn and adapt to various technical environments, from development to cloud architecture, including BI.",
+    "description": "IT engineer specialized in Cloud and DevOps, with experience in full stack development, automation, CI/CD and the deployment of Linux/Cloud infrastructures. I cover the entire application lifecycle, from design to deployment and monitoring.",
     "education": "Education",
-    "educationDesc": "Currently pursuing Engineering in Cloud Computing & Architecture at ESPRIT",
+    "educationDesc": "Graduated from ESPRIT in Cloud Computing & Architecture Engineering — Class valedictorian, PFE with Excellence",
     "development": "Development",
-    "developmentDesc": "Full-stack development with modern technologies and frameworks",
+    "developmentDesc": "Full stack development (backend & frontend) with modern technologies and frameworks",
     "cloud": "Cloud & DevOps",
-    "cloudDesc": "Infrastructure automation and cloud architecture expertise",
+    "cloudDesc": "Expertise in Linux/Cloud infrastructure automation, CI/CD, containerization and monitoring",
     "yearsExperience": "Years Experience",
     "projects": "Projects Completed",
     "certifications": "Certifications",
@@ -33,7 +33,10 @@
     "age": "Age",
     "location": "Location",
     "languages": "Languages",
-    "languagesList": "French, English, Arabic",
+    "languagesList": "Arabic (native), French (B2), English (intermediate)",
+    "languageArabic": "Arabic (native)",
+    "languageFrench": "French (B2)",
+    "languageEnglish": "English (intermediate)",
     "availability": "Availability",
     "availabilityStatus": "Available for opportunities"
   },
@@ -41,12 +44,15 @@
     "title": "Skills & Expertise",
     "subtitle": "Technologies and tools I work with",
     "all": "All Skills",
-    "programming": "Programming",
-    "web": "Web Development",
+    "programming": "Backend & Programming",
+    "web": "Frontend & CMS",
     "cloud": "Cloud & DevOps",
-    "database": "Databases & BI",
-    "tools": "Tools & Others",
-    "certifications": "Certifications"
+    "systems": "Systems & Networks",
+    "database": "Data & BI",
+    "ai": "AI & Automation",
+    "tools": "Methods & Tools",
+    "certifications": "Certifications",
+    "viewCertificate": "View certificate"
   },
   "experience": {
     "title": "Experience & Education",
@@ -58,7 +64,8 @@
     "yearsWork": "Years of Work",
     "awards": "Competition Awards",
     "leadership": "Leadership Roles",
-    "degrees": "Academic Degrees"
+    "degrees": "Academic Degrees",
+    "viewCertificate": "View certificate"
   },
   "projects": {
     "title": "Projects & Work",

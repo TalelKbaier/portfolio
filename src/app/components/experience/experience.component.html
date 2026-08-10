@@ -84,6 +84,11 @@
             <div class="card-body">
               <p class="card-description">{{ exp.description }}</p>
               
+              <a *ngIf="exp.link" [href]="exp.link" target="_blank" rel="noopener" class="card-cert-link">
+                <i class="fas fa-external-link-alt"></i>
+                {{ translate('experience.viewCertificate') }}
+              </a>
+              
               <div class="card-technologies" *ngIf="exp.technologies && exp.technologies.length > 0">
                 <span 
                   *ngFor="let tech of exp.technologies"
@@ -125,7 +130,7 @@
             <i class="fas fa-users"></i>
           </div>
           <div class="stat-content">
-            <div class="stat-number">3</div>
+            <div class="stat-number">2</div>
             <div class="stat-label">{{ translate('experience.leadership') }}</div>
           </div>
         </div>
@@ -135,7 +140,7 @@
             <i class="fas fa-graduation-cap"></i>
           </div>
           <div class="stat-content">
-            <div class="stat-number">3</div>
+            <div class="stat-number">4</div>
             <div class="stat-label">{{ translate('experience.degrees') }}</div>
           </div>
         </div>

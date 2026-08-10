@@ -45,9 +45,16 @@ export class ContactComponent implements OnInit {
     {
       icon: 'fab fa-github',
       title: 'GitHub',
-      value: 'talel-kbaier',
-      link: 'https://github.com/talel-kb',
+      value: 'TalelKbaier',
+      link: 'https://github.com/TalelKbaier',
       color: '#333'
+    },
+    {
+      icon: 'fas fa-globe',
+      title: 'Portfolio',
+      value: 'talelkbaier.github.io/portfolio',
+      link: 'https://talelkbaier.github.io/portfolio',
+      color: '#8b5cf6'
     }
   ];
 

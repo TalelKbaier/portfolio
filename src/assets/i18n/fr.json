@@ -9,8 +9,8 @@
   },
   "home": {
     "greeting": "Bonjour, je suis",
-    "role": "Ingénieur Cloud & Développeur Web",
-    "description": "En tant qu'étudiant ingénieur en Cloud et développeur en activité, je me distingue par ma capacité à apprendre rapidement et à m'adapter à des environnements techniques variés, allant du développement à l'architecture cloud, en passant par la BI.",
+    "role": "Ingénieur Informatique — Cloud & DevOps",
+    "description": "Ingénieur informatique spécialisé en Cloud et DevOps, avec une expérience en développement full stack, automatisation, CI/CD et déploiement d'infrastructures Linux/Cloud. J'interviens sur l'ensemble du cycle de vie des applications, de la conception jusqu'au déploiement et à la supervision.",
     "downloadCV": "Télécharger CV",
     "contactMe": "Me Contacter",
     "scrollDown": "Défiler vers le bas"
@@ -18,13 +18,13 @@
   "about": {
     "title": "À Propos de Moi",
     "subtitle": "Apprenez à mieux me connaître",
-    "description": "En tant qu'étudiant ingénieur en Cloud et développeur en activité, je me distingue par ma capacité à apprendre rapidement et à m'adapter à des environnements techniques variés, allant du développement à l'architecture cloud, en passant par la BI.",
+    "description": "Ingénieur informatique spécialisé en Cloud et DevOps, avec une expérience en développement full stack, automatisation, CI/CD et déploiement d'infrastructures Linux/Cloud. J'interviens sur l'ensemble du cycle de vie des applications, de la conception jusqu'au déploiement et à la supervision.",
     "education": "Formation",
-    "educationDesc": "Actuellement en Ingénierie Cloud Computing & Architecture à ESPRIT",
+    "educationDesc": "Diplômé d'ESPRIT en Ingénierie Cloud Computing & Architecture — Major de promotion, PFE mention Excellent",
     "development": "Développement",
-    "developmentDesc": "Développement full-stack avec les technologies et frameworks modernes",
+    "developmentDesc": "Développement full stack (backend & frontend) avec les technologies et frameworks modernes",
     "cloud": "Cloud & DevOps",
-    "cloudDesc": "Expertise en automatisation d'infrastructure et architecture cloud",
+    "cloudDesc": "Expertise en automatisation d'infrastructures Linux/Cloud, CI/CD, conteneurisation et supervision",
     "yearsExperience": "Années d'Expérience",
     "projects": "Projets Réalisés",
     "certifications": "Certifications",
@@ -33,7 +33,10 @@
     "age": "Âge",
     "location": "Localisation",
     "languages": "Langues",
-    "languagesList": "Français, Anglais, Arabe",
+    "languagesList": "Arabe (maternel), Français (B2), Anglais (intermédiaire)",
+    "languageArabic": "Arabe (maternel)",
+    "languageFrench": "Français (B2)",
+    "languageEnglish": "Anglais (intermédiaire)",
     "availability": "Disponibilité",
     "availabilityStatus": "Disponible pour de nouvelles opportunités"
   },
@@ -41,12 +44,15 @@
     "title": "Compétences & Expertise",
     "subtitle": "Technologies et outils que j'utilise",
     "all": "Toutes les Compétences",
-    "programming": "Programmation",
-    "web": "Développement Web",
+    "programming": "Backend & Programmation",
+    "web": "Frontend & CMS",
     "cloud": "Cloud & DevOps",
-    "database": "Bases de Données & BI",
-    "tools": "Outils & Autres",
-    "certifications": "Certifications"
+    "systems": "Systèmes & Réseaux",
+    "database": "Data & BI",
+    "ai": "IA & Automatisation",
+    "tools": "Méthodes & Outils",
+    "certifications": "Certifications",
+    "viewCertificate": "Voir le certificat"
   },
   "experience": {
     "title": "Expérience & Formation",
@@ -58,7 +64,8 @@
     "yearsWork": "Années de Travail",
     "awards": "Prix en Compétition",
     "leadership": "Rôles de Leadership",
-    "degrees": "Diplômes Académiques"
+    "degrees": "Diplômes Académiques",
+    "viewCertificate": "Voir le certificat"
   },
   "projects": {
     "title": "Projets & Réalisations",

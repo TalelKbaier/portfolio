@@ -1,9 +1,9 @@
 <section id="projects" class="projects-section">
   <div class="container">
-    <!-- <div class="section-header" data-aos="fade-up">
+    <div class="section-header" data-aos="fade-up">
       <h2 class="section-title">{{ translate('projects.title') }}</h2>
       <p class="section-subtitle">{{ translate('projects.subtitle') }}</p>
-    </div> -->
+    </div>
 
 
     <!-- Category Filter -->
@@ -22,34 +22,27 @@
       <div 
         *ngFor="let project of getFilteredProjects(); let i = index"
         class="project-card"
+        [class.featured]="project.featured"
         [attr.data-aos]="'fade-up'"
         [attr.data-aos-delay]="i * 100">
         
-        <div class="card-image">
-          <div class="image-placeholder">
+        <div class="card-top">
+          <div class="card-icon">
             <i class="fas" 
+               [class.fa-star]="project.category === 'pfe'"
                [class.fa-briefcase]="project.category === 'professional'"
                [class.fa-graduation-cap]="project.category === 'academic'"></i>
           </div>
-          <div class="card-overlay">
-            <div class="card-actions">
-              <a *ngIf="project.link" [href]="project.link" class="action-btn" target="_blank">
-                <i class="fas fa-external-link-alt"></i>
-              </a>
-              <a *ngIf="project.github" [href]="project.github" class="action-btn" target="_blank">
-                <i class="fab fa-github"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card-content">
-          <div class="card-header">
-            <h4 class="card-title">{{ project.title }}</h4>
+          <div class="card-meta">
+            <span class="card-category">{{ getCategoryName(project.category) }}</span>
             <span class="card-status" [class]="getStatusClass(project.status)">
               {{ getStatusText(project.status) }}
             </span>
           </div>
+        </div>
+
+        <div class="card-content">
+          <h4 class="card-title">{{ project.title }}</h4>
           
           <p class="card-description">{{ project.description }}</p>
           

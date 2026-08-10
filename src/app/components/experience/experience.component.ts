@@ -11,6 +11,7 @@ interface Experience {
   type: 'work' | 'education' | 'competition';
   location?: string;
   duration?: string;
+  link?: string;
 }
 
 @Component({
@@ -25,57 +26,65 @@ export class ExperienceComponent implements OnInit {
   experiences: Experience[] = [
     {
       year: '2023 - Présent',
-      title: 'Développeur',
+      title: 'Développeur – Assistant Delivery Team',
       company: 'Triweb',
-      description: 'Conception, développement et déploiement d\'applications, mise en place d\'infrastructures serveur sous Ubuntu et automatisation de processus métier.',
-      technologies: ['Angular', 'Spring Boot', 'Docker', 'Ubuntu', 'CI/CD'],
+      description: 'Gestion et suivi de projets, de la conception jusqu\'au déploiement. Développement d\'applications web et automatisation de processus métier. Mise en place et administration d\'infrastructures et intégration de solutions d\'automatisation et d\'intelligence artificielle.',
+      technologies: ['Angular', 'Node.js', 'Docker', 'Ubuntu', 'CI/CD', 'IA'],
       type: 'work',
-      duration: '1+ an'
+      duration: '3+ ans'
     },
     {
-      year: '2022-Présent',
-      title: 'Ingénierie en informatique (Cloud Computing & Architecture)',
-      company: 'ESPRIT',
-      description: 'Formation spécialisée en architecture cloud, développement d\'applications distribuées et technologies émergentes.',
+      year: '2022 - 2026',
+      title: 'Diplôme d\'ingénieur en informatique',
+      company: 'ESPRIT – École Supérieure Privée d\'Ingénierie et de Technologies',
+      description: 'Spécialité : Cloud Computing et architecture informatique (cours du soir). Major de promotion | PFE : mention Excellent.',
       technologies: ['Cloud Computing', 'Architecture', 'DevOps', 'Microservices'],
       type: 'education',
-      location: 'Tunis, Tunisia'
+      location: 'Tunis, Tunisie'
+    },
+    {
+      year: '2020 - 2022',
+      title: 'Licence en Business Intelligence',
+      company: 'FSEGT – Faculté des Sciences Économiques et de Gestion de Tunis',
+      description: 'Formation en analyse de données, développement de solutions BI et gestion de projets analytiques.',
+      technologies: ['BI', 'Data Analysis', 'SQL', 'Power BI'],
+      type: 'education',
+      location: 'Tunis, Tunisie'
     },
     {
       year: '2022',
-      title: 'Développeur Freelance',
-      company: 'Indépendant',
-      description: 'Développement de solutions web personnalisées pour divers clients, gestion de projets en autonomie.',
-      technologies: ['WordPress', 'PHP', 'JavaScript', 'CSS'],
-      type: 'work',
-      duration: '6 mois'
-    },
-    {
-      year: '2021',
-      title: 'Business Analytics (Stage PFE)',
+      title: 'Business Analytics – Stage de fin de licence',
       company: 'Assurance COMAR',
-      description: 'Développement de tableaux de bord analytiques et mise en place de solutions BI pour l\'optimisation des processus métier.',
-      technologies: ['Power BI', 'SQL Server', 'Python', 'Data Analysis'],
+      description: 'Analyse, nettoyage et structuration des données. Création de tableaux de bord et d\'indicateurs d\'aide à la décision.',
+      technologies: ['Power BI', 'SQL Server', 'Data Analysis', 'Excel'],
       type: 'work',
       duration: '5 mois'
     },
     {
       year: '2021',
       title: 'Développeur WordPress',
-      company: 'Projets clients',
-      description: 'Création et personnalisation de sites web WordPress, optimisation SEO et maintenance.',
-      technologies: ['WordPress', 'PHP', 'MySQL', 'SEO'],
-      type: 'work',
-      duration: '8 mois'
+      company: 'Freelance',
+      description: 'Développement de sites web avec WordPress.',
+      technologies: ['WordPress', 'PHP'],
+      type: 'work'
     },
     {
-      year: '2020-2022',
-      title: 'Licence en Business Intelligence',
-      company: 'FSEGT',
-      description: 'Formation en analyse de données, développement de solutions BI et gestion de projets analytiques.',
-      technologies: ['BI', 'Data Analysis', 'SQL', 'Power BI'],
+      year: '2019 - 2020',
+      title: 'Première année en Business Computing',
+      company: 'ISIMA – Institut Supérieur d\'Informatique de Mahdia',
+      description: 'Première année d\'études en informatique de gestion.',
+      technologies: ['Informatique', 'Business Computing'],
       type: 'education',
-      location: 'Tunis, Tunisia'
+      location: 'Mahdia, Tunisie'
+    },
+    {
+      year: '2018 - 2019',
+      title: 'Baccalauréat en sciences techniques',
+      company: 'Lycée du Bardo',
+      description: 'Obtention du baccalauréat en sciences techniques.',
+      technologies: ['Sciences Techniques'],
+      type: 'education',
+      location: 'Tunis, Tunisie'
     }
   ];
 
@@ -86,15 +95,17 @@ export class ExperienceComponent implements OnInit {
       company: 'ISET Bizerte',
       description: 'Développement d\'une solution innovante en équipe lors du hackathon organisé par IEEE ISET Bizerte.',
       technologies: ['Innovation', 'Teamwork', 'Problem Solving'],
-      type: 'competition' as const
+      type: 'competition' as const,
+      link: 'https://drive.google.com/file/d/1ASAxl1DAM5L3Kli9cqtPC2mYm-ceFoBx/view?usp=drive_link'
     },
     {
-      year: '2020/2021',
+      year: '2020-2021',
       title: 'Finaliste OSTx Open Startup',
       company: 'Open Startup Tunisia',
       description: 'Participation au programme d\'accélération de startups avec un projet technologique innovant.',
       technologies: ['Entrepreneurship', 'Innovation', 'Pitch'],
-      type: 'competition' as const
+      type: 'competition' as const,
+      link: 'https://drive.google.com/file/d/1hx_WNN00jDzkfdwly_dhajh7N6Oj4oO4/view?usp=sharing'
     }
   ];
 
@@ -110,17 +121,9 @@ export class ExperienceComponent implements OnInit {
     {
       year: '2021-2022',
       title: 'Président',
-      company: 'Rotaract Tunis El Manar',
-      description: 'Direction de l\'association étudiante, organisation d\'événements et développement de partenariats.',
+      company: 'Club Rotaract Tunis El Manar',
+      description: 'Direction du club Rotaract, organisation d\'événements et développement de partenariats.',
       technologies: ['Leadership', 'Event Management', 'Networking'],
-      type: 'work' as const
-    },
-    {
-      year: '2018-2019',
-      title: 'Président',
-      company: 'BIL Omrane Supérieur',
-      description: 'Gestion de l\'association lycéenne et coordination des activités étudiantes.',
-      technologies: ['Leadership', 'Organization', 'Communication'],
       type: 'work' as const
     }
   ];

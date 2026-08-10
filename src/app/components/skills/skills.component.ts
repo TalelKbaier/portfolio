@@ -9,6 +9,14 @@ interface Skill {
   category: string;
 }
 
+interface Certification {
+  name: string;
+  issuer: string;
+  year: string;
+  icon: string;
+  link: string;
+}
+
 @Component({
   selector: 'app-skills',
   standalone: true,
@@ -19,58 +27,96 @@ interface Skill {
 export class SkillsComponent implements OnInit {
   
   skills: Skill[] = [
-    // Programming
+    // Backend & Programming
     { name: 'Python', level: 90, icon: 'fab fa-python', category: 'programming' },
-    { name: 'Java Spring', level: 85, icon: 'fab fa-java', category: 'programming' },
-    { name: 'JavaScript', level: 88, icon: 'fab fa-js-square', category: 'programming' },
-    { name: 'TypeScript', level: 82, icon: 'fab fa-js-square', category: 'programming' },
-    
-    // Web Development  
+    { name: 'Java/Spring', level: 85, icon: 'fab fa-java', category: 'programming' },
+    { name: '.NET', level: 80, icon: 'fab fa-microsoft', category: 'programming' },
+    { name: 'Node.js', level: 80, icon: 'fab fa-node-js', category: 'programming' },
+    { name: 'PHP', level: 78, icon: 'fab fa-php', category: 'programming' },
+
+    // Frontend & CMS
     { name: 'Angular', level: 85, icon: 'fab fa-angular', category: 'web' },
-    { name: 'Node.js', level: 80, icon: 'fab fa-node-js', category: 'web' },
     { name: 'React', level: 78, icon: 'fab fa-react', category: 'web' },
-    { name: '.NET', level: 75, icon: 'fab fa-microsoft', category: 'web' },
-    { name: 'WordPress', level: 82, icon: 'fab fa-wordpress', category: 'web' },
+    { name: 'JavaScript', level: 88, icon: 'fab fa-js-square', category: 'web' },
     { name: 'HTML5/CSS3', level: 95, icon: 'fab fa-html5', category: 'web' },
-    { name: 'React Native', level: 75, icon: 'fab fa-react', category: 'web' },
-    { name: 'PHP', level: 78, icon: 'fab fa-php', category: 'web' },
-    
+    { name: 'Bootstrap', level: 85, icon: 'fab fa-bootstrap', category: 'web' },
+    { name: 'WordPress', level: 82, icon: 'fab fa-wordpress', category: 'web' },
+
     // Cloud & DevOps
-    { name: 'OpenStack', level: 88, icon: 'fas fa-cloud', category: 'cloud' },
+    { name: 'Azure DevOps', level: 85, icon: 'fab fa-microsoft', category: 'cloud' },
     { name: 'Docker', level: 85, icon: 'fab fa-docker', category: 'cloud' },
     { name: 'Kubernetes', level: 80, icon: 'fas fa-dharmachakra', category: 'cloud' },
+    { name: 'Proxmox', level: 80, icon: 'fas fa-server', category: 'cloud' },
     { name: 'Ansible', level: 78, icon: 'fas fa-cogs', category: 'cloud' },
-    { name: 'Jenkins', level: 75, icon: 'fas fa-tools', category: 'cloud' },
-    { name: 'Prometheus', level: 72, icon: 'fas fa-chart-area', category: 'cloud' },
-    { name: 'Grafana', level: 70, icon: 'fas fa-chart-line', category: 'cloud' },
-    { name: 'Heat', level: 78, icon: 'fas fa-fire', category: 'cloud' },
-    { name: 'Helm', level: 70, icon: 'fas fa-ship', category: 'cloud' },
-    
-    // Databases & BI
+    { name: 'Jenkins', level: 78, icon: 'fas fa-tasks', category: 'cloud' },
+    { name: 'Helm', level: 72, icon: 'fas fa-ship', category: 'cloud' },
+    { name: 'Prometheus', level: 75, icon: 'fas fa-chart-area', category: 'cloud' },
+    { name: 'Grafana', level: 75, icon: 'fas fa-chart-line', category: 'cloud' },
+    { name: 'OVH', level: 75, icon: 'fas fa-cloud', category: 'cloud' },
+    { name: 'OpenStack', level: 80, icon: 'fas fa-cloud', category: 'cloud' },
+
+    // Systèmes & Réseaux
+    { name: 'Linux', level: 85, icon: 'fab fa-linux', category: 'systems' },
+    { name: 'Windows', level: 80, icon: 'fab fa-windows', category: 'systems' },
+    { name: 'Samba', level: 78, icon: 'fas fa-folder-open', category: 'systems' },
+    { name: 'VLAN', level: 80, icon: 'fas fa-network-wired', category: 'systems' },
+    { name: 'Routage', level: 80, icon: 'fas fa-route', category: 'systems' },
+    { name: 'NFS', level: 78, icon: 'fas fa-hdd', category: 'systems' },
+    { name: 'SFTP', level: 78, icon: 'fas fa-file-zipper', category: 'systems' },
+    { name: 'DNS', level: 78, icon: 'fas fa-globe', category: 'systems' },
+
+    // Data & BI
     { name: 'SQL Server', level: 85, icon: 'fas fa-database', category: 'database' },
     { name: 'MongoDB', level: 80, icon: 'fas fa-leaf', category: 'database' },
     { name: 'Power BI', level: 88, icon: 'fas fa-chart-line', category: 'database' },
-    { name: 'phpMyAdmin', level: 82, icon: 'fas fa-database', category: 'database' },
-    { name: 'Excel', level: 90, icon: 'fas fa-file-excel', category: 'database' },
-    
-    // Tools
+
+    // IA & Automatisation
+    { name: 'n8n', level: 80, icon: 'fas fa-project-diagram', category: 'ai' },
+    { name: 'Intégration API IA', level: 82, icon: 'fas fa-plug', category: 'ai' },
+    { name: 'Assistants IA', level: 80, icon: 'fas fa-robot', category: 'ai' },
+
+    // Méthodes & Outils
     { name: 'Git', level: 90, icon: 'fab fa-git-alt', category: 'tools' },
-    { name: 'Linux/Ubuntu', level: 85, icon: 'fab fa-ubuntu', category: 'tools' },
-    { name: 'Selenium', level: 82, icon: 'fas fa-robot', category: 'tools' },
-    { name: 'Samba', level: 78, icon: 'fas fa-folder-open', category: 'tools' },
-    { name: 'Packet Tracer', level: 75, icon: 'fas fa-network-wired', category: 'tools' },
-    { name: 'Odoo', level: 72, icon: 'fas fa-shopping-cart', category: 'tools' }
+    { name: 'UML', level: 80, icon: 'fas fa-diagram-project', category: 'tools' },
+    { name: 'Odoo', level: 72, icon: 'fas fa-shopping-cart', category: 'tools' },
+    { name: 'Microsoft Office', level: 85, icon: 'fas fa-file-word', category: 'tools' }
   ];
 
   skillCategories = [
     { key: 'programming', name: 'Programming' },
     { key: 'web', name: 'Web Development' },
     { key: 'cloud', name: 'Cloud & DevOps' },
+    { key: 'systems', name: 'Systems & Networks' },
     { key: 'database', name: 'Databases & BI' },
-    { key: 'tools', name: 'Tools & Others' }
+    { key: 'ai', name: 'AI & Automation' },
+    { key: 'tools', name: 'Methods & Tools' }
   ];
 
   activeCategory = 'all';
+
+  certifications: Certification[] = [
+    {
+      name: 'Python niveau 1',
+      issuer: 'FormaLab',
+      year: '2023',
+      icon: 'fab fa-python',
+      link: 'https://drive.google.com/file/d/1PdIBFGr6RDzoCkz6uXcNu4zMD7AdhICV/view?usp=sharing'
+    },
+    {
+      name: 'Intro to AI',
+      issuer: 'LinkedIn Learning',
+      year: '2023',
+      icon: 'fas fa-robot',
+      link: 'https://www.linkedin.com/learning/certificates/e9792c39adeaba732ca9ebed79f18834457c7963805861519c65b19551d4b735'
+    },
+    {
+      name: 'Sponsoring',
+      issuer: 'LeCoach',
+      year: '2022',
+      icon: 'fas fa-handshake',
+      link: 'https://drive.google.com/file/d/10do1VP9yPhhgEePjt8Wj_T-3p15IOPrL/view?usp=sharing'
+    }
+  ];
 
   constructor(private translationService: TranslationService) {}
 

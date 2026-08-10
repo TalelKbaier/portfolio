@@ -26,26 +26,27 @@ export class ProjectsComponent implements OnInit {
   showMoreIndex: number | null = null;
   
   projects: Project[] = [
+    // Projet de Fin d'Études
+    {
+      title: 'PFE – Application Web Intelligente (2026)',
+      description: 'Application web intelligente – IA, automatisation, Cloud et CI/CD. Développement d\'une application web intégrant un assistant IA et des workflows d\'automatisation avec n8n. Conception et automatisation d\'un pipeline CI/CD dans Azure DevOps (création et publication d\'images Docker sur Docker Hub). Conteneurisation avec Docker, orchestration avec Kubernetes et déploiement sur une infrastructure virtualisée avec Proxmox. Supervision et monitoring avec Prometheus et Grafana. Déploiement de machines virtuelles dédiées au stockage persistant des données.',
+      technologies: ['Azure DevOps', 'Docker', 'Kubernetes', 'Proxmox', 'n8n', 'Prometheus', 'Grafana', 'Assistants IA'],
+      category: 'pfe',
+      status: 'completed',
+      featured: true
+    },
     // Projets Professionnels
     {
       title: 'Applications Web Modernes',
-      description: 'Conception et développement d\'applications web avec Angular, .NET, Node.js, WordPress, SQL Server et phpMyAdmin.',
-      technologies: ['Angular', 'Node.js', 'WordPress', 'SQL Server', 'phpMyAdmin', '.NET'],
-      category: 'professional',
-      status: 'completed',
-      featured: false
-    },
-    {
-      title: 'Automatisation Desktop Python',
-      description: 'Développement d\'applications desktop en Python avec Selenium pour l\'automatisation de la récupération de données.',
-      technologies: ['Python', 'Selenium', 'Desktop Development'],
+      description: 'Conception et développement de plusieurs applications web avec .NET, Angular, Node.js, WordPress et SQL Server.',
+      technologies: ['.NET', 'Angular', 'Node.js', 'WordPress', 'SQL Server'],
       category: 'professional',
       status: 'completed',
       featured: false
     },
     {
       title: 'Infrastructure Samba & Synchronisation',
-      description: 'Mise en place d\'un partage de dossiers Samba sous Ubuntu et configuration d\'une tâche cron pour la synchronisation régulière des fichiers.',
+      description: 'Mise en place d\'une infrastructure sous Ubuntu, comprenant un partage de fichiers avec Samba et une synchronisation planifiée avec cron.',
       technologies: ['Ubuntu', 'Samba', 'Cron', 'Linux'],
       category: 'professional',
       status: 'completed',
@@ -53,64 +54,72 @@ export class ProjectsComponent implements OnInit {
     },
     {
       title: 'Tableaux de Bord BI',
-      description: 'Création de tableaux de bord et analyse de la performance technique d\'un programme de réassurance à l\'aide de Power BI Desktop et Excel.',
-      technologies: ['Power BI', 'Excel', 'Business Intelligence', 'Réassurance'],
+      description: 'Création de tableaux de bord et d\'indicateurs de suivi avec Power BI Desktop et Excel.',
+      technologies: ['Power BI', 'Excel', 'Business Intelligence'],
+      category: 'professional',
+      status: 'completed',
+      featured: false
+    },
+    {
+      title: 'Intégration IA & Assistants IA',
+      description: 'Intégration d\'API d\'intelligence artificielle et développement d\'assistants IA pour automatiser des tâches métier.',
+      technologies: ['API IA', 'Assistants IA', 'n8n', 'Automatisation'],
       category: 'professional',
       status: 'completed',
       featured: false
     },
     // Projets Académiques
     {
-      title: 'Infrastructure Cloud OpenStack',
-      description: 'Déploiement d\'une infrastructure cloud avec OpenStack et automatisation de la création d\'instances via Heat.',
-      technologies: ['OpenStack', 'Heat', 'Cloud Computing'],
+      title: 'Projet CI/CD – Azure DevOps',
+      description: 'Déploiement d\'une infrastructure cloud privée sur OpenStack et application full-stack conteneurisée sur Kubernetes.',
+      technologies: ['Azure DevOps', 'OpenStack', 'Kubernetes', 'Docker', 'CI/CD'],
       category: 'academic',
       status: 'completed',
       featured: false
     },
     {
-      title: 'Cluster Kubernetes Automatisé',
-      description: 'Mise en place d\'un cluster Kubernetes automatisé avec Ansible, supervisé avec Prometheus et Grafana via Helm.',
-      technologies: ['Kubernetes', 'Ansible', 'Prometheus', 'Grafana', 'Helm'],
+      title: 'Projet DevOps – Jenkins',
+      description: 'Mise en place d\'un pipeline Jenkins intégrant SonarQube, Nexus et Docker, avec déploiement d\'une stack Spring Boot + MySQL via Docker Compose et supervision avec Prometheus/Grafana.',
+      technologies: ['Jenkins', 'SonarQube', 'Nexus', 'Docker', 'Spring Boot', 'MySQL', 'Prometheus', 'Grafana'],
       category: 'academic',
       status: 'completed',
       featured: false
     },
     {
-      title: 'Docker Swarm & Haute Disponibilité',
-      description: 'Mise en place d\'un cluster Docker Swarm et conteneurisation d\'une application web, avec garantie de haute disponibilité.',
-      technologies: ['Docker Swarm', 'Containerization'],
+      title: 'Application Web – React/.NET/MongoDB',
+      description: 'Développement d\'une application web avec React, .NET et MongoDB.',
+      technologies: ['React', '.NET', 'MongoDB'],
       category: 'academic',
       status: 'completed',
       featured: false
     },
     {
-      title: 'Pipeline CI/CD Jenkins',
-      description: 'Mise en place d\'un pipeline CI/CD avec Jenkins.',
-      technologies: ['Jenkins', 'CI/CD', 'DevOps'],
+      title: 'Application Mobile – React Native',
+      description: 'Développement d\'une application mobile avec React Native.',
+      technologies: ['React Native'],
       category: 'academic',
       status: 'completed',
       featured: false
     },
     {
-      title: 'Configuration Réseau Avancée',
-      description: 'Configuration réseau : routage IP, VLAN, sécurisation des ports, adressage IP statique et dynamique, routage dynamique (réalisée avec Cisco Packet Tracer).',
+      title: 'Machine Learning',
+      description: 'Réalisation de travaux pratiques de Machine Learning supervisé et non supervisé.',
+      technologies: ['Python', 'Machine Learning', 'Supervisé/non supervisé'],
+      category: 'academic',
+      status: 'completed',
+      featured: false
+    },
+    {
+      title: 'Réseaux – Cisco Packet Tracer',
+      description: 'Configuration d\'infrastructures réseau : VLAN, routage IP statique et dynamique, sécurisation des ports et adressage IP.',
       technologies: ['Cisco Packet Tracer', 'VLAN', 'Routing', 'Network Security'],
       category: 'academic',
       status: 'completed',
       featured: false
     },
     {
-      title: 'Applications Web Modernes',
-      description: 'Développement d\'applications web avec React, .NET et MongoDB, ainsi que d\'une application mobile avec React Native.',
-      technologies: ['React', '.NET', 'MongoDB', 'React Native'],
-      category: 'academic',
-      status: 'completed',
-      featured: false
-    },
-    {
-      title: 'Sites E-commerce Odoo',
-      description: 'Création de sites e-commerce avec Odoo.',
+      title: 'Site E-commerce – Odoo',
+      description: 'Création d\'un site e-commerce avec Odoo.',
       technologies: ['Odoo', 'E-commerce', 'ERP'],
       category: 'academic',
       status: 'completed',
@@ -120,6 +129,7 @@ export class ProjectsComponent implements OnInit {
 
   projectCategories = [
     { key: 'all', name: 'Tous les projets' },
+    { key: 'pfe', name: 'Projet de Fin d\'Études' },
     { key: 'professional', name: 'Projets Professionnels' },
     { key: 'academic', name: 'Projets Académiques' }
   ];
@@ -173,5 +183,10 @@ export class ProjectsComponent implements OnInit {
       default:
         return '';
     }
+  }
+
+  getCategoryName(category: string): string {
+    const found = this.projectCategories.find(cat => cat.key === category);
+    return found ? found.name : (category.charAt(0).toUpperCase() + category.slice(1));
   }
 }

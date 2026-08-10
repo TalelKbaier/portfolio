@@ -75,15 +75,24 @@
           <div class="info-grid">
             <div class="info-item">
               <span class="info-label">{{ translate('about.age') }}:</span>
-              <span class="info-value">25</span>
+              <span class="info-value">26</span>
             </div>
             <div class="info-item">
               <span class="info-label">{{ translate('about.location') }}:</span>
               <span class="info-value">Tunis, Tunisia</span>
             </div>
-            <div class="info-item">
+            <div class="info-item languages-item">
               <span class="info-label">{{ translate('about.languages') }}:</span>
-              <span class="info-value">{{ translate('about.languagesList') }}</span>
+              <span class="info-value languages-value">
+                {{ translate('about.languageArabic') }},
+                <a href="https://drive.google.com/file/d/1py04WH2foifDYWaPs2cpOg5F3d2tgtYe/view?usp=drive_link"
+                   target="_blank" rel="noopener" class="language-cert-link"
+                   aria-label="Français B2 - TCF certificate">
+                  {{ translate('about.languageFrench') }}
+                  <i class="fas fa-external-link-alt"></i>
+                </a>,
+                {{ translate('about.languageEnglish') }}
+              </span>
             </div>
             <div class="info-item">
               <span class="info-label">{{ translate('about.availability') }}:</span>
