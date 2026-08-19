@@ -74,7 +74,9 @@
     "academic": "Projets Académiques",
     "completed": "Terminé",
     "inProgress": "En Cours",
-    "planned": "Planifié"
+    "planned": "Planifié",
+    "readMore": "Voir plus",
+    "showLess": "Voir moins"
   },
   "contact": {
     "title": "Prenons Contact",

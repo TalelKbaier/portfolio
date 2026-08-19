@@ -243,6 +243,34 @@
       }
     }
 
+    .desc-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      align-self: flex-start;
+      margin: -0.35rem 0 0.35rem;
+      padding: 4px 12px;
+      border-radius: 15px;
+      border: 1px solid var(--border-color);
+      background: var(--bg-secondary);
+      color: var(--primary-color);
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+
+      &:hover,
+      &.open {
+        background: var(--primary-gradient);
+        border-color: transparent;
+        color: #fff;
+      }
+
+      i {
+        font-size: 0.72rem;
+      }
+    }
+
     .card-technologies {
       display: flex;
       flex-wrap: wrap;

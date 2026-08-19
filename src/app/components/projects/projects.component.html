@@ -13,7 +13,7 @@
         class="filter-btn" 
         [class.active]="activeCategory === category.key"
         (click)="setActiveCategory(category.key)">
-        {{ category.name }}
+        {{ getCategoryName(category.key) }}
       </button>
     </div>
 
@@ -45,8 +45,17 @@
           <h4 class="card-title">{{ project.title }}</h4>
           
           <ul class="card-desc-list">
-            <li *ngFor="let item of getDescriptionList(project)">{{ item }}</li>
+            <li *ngFor="let item of visibleDescription(project)">{{ item }}</li>
           </ul>
+
+          <button
+            *ngIf="getHiddenCount(project) > 0"
+            class="desc-toggle"
+            [class.open]="isExpanded(project)"
+            (click)="toggleExpand(project)">
+            <i class="fas" [class.fa-chevron-down]="!isExpanded(project)" [class.fa-chevron-up]="isExpanded(project)"></i>
+            {{ isExpanded(project) ? translate('projects.showLess') : translate('projects.readMore') + ' (' + getHiddenCount(project) + ')' }}
+          </button>
           
           <div class="card-technologies">
             <span 

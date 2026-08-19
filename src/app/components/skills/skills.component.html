@@ -67,12 +67,12 @@
             <i [class]="cert.icon"></i>
           </div>
           <div class="cert-content">
-            <h4>{{ cert.name }}</h4>
+            <h4>{{ text(cert.name) }}</h4>
             <p>{{ cert.issuer }}</p>
             <span class="cert-year">{{ cert.year }}</span>
           </div>
           <a [href]="cert.link" target="_blank" rel="noopener" class="cert-link"
-             aria-label="View {{ cert.name }} certificate">
+             aria-label="View {{ text(cert.name) }} certificate">
             <i class="fas fa-external-link-alt"></i>
             {{ translate('skills.viewCertificate') }}
           </a>

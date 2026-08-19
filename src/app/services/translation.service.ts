@@ -100,6 +100,13 @@ export class TranslationService {
     return (typeof translation === 'string' ? translation : key);
   }
 
+  t(value: string | { fr: string; en: string }): string {
+    if (typeof value === 'string') {
+      return value;
+    }
+    return this.currentLanguage === 'en' ? value.en : value.fr;
+  }
+
   toggleLanguage(): void {
     const newLanguage = this.currentLanguage === 'fr' ? 'en' : 'fr';
     this.setLanguage(newLanguage);

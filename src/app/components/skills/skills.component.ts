@@ -9,8 +9,13 @@ interface Skill {
   category: string;
 }
 
+interface I18nText {
+  fr: string;
+  en: string;
+}
+
 interface Certification {
-  name: string;
+  name: I18nText;
   issuer: string;
   year: string;
   icon: string;
@@ -96,28 +101,28 @@ export class SkillsComponent implements OnInit {
 
   certifications: Certification[] = [
     {
-      name: 'Python niveau 1',
+      name: { fr: 'Python niveau 1', en: 'Python Level 1' },
       issuer: 'FormaLab',
       year: '2023',
       icon: 'fab fa-python',
       link: 'https://drive.google.com/file/d/1PdIBFGr6RDzoCkz6uXcNu4zMD7AdhICV/view?usp=sharing'
     },
     {
-      name: 'Intro to AI',
+      name: { fr: 'Intro to AI', en: 'Intro to AI' },
       issuer: 'LinkedIn Learning',
       year: '2023',
       icon: 'fas fa-robot',
       link: 'https://www.linkedin.com/learning/certificates/e9792c39adeaba732ca9ebed79f18834457c7963805861519c65b19551d4b735'
     },
     {
-      name: 'Sponsoring',
+      name: { fr: 'Sponsoring', en: 'Sponsoring' },
       issuer: 'LeCoach',
       year: '2022',
       icon: 'fas fa-handshake',
       link: 'https://drive.google.com/file/d/10do1VP9yPhhgEePjt8Wj_T-3p15IOPrL/view?usp=sharing'
     },
     {
-      name: 'Applications of AI for Anomaly Detection',
+      name: { fr: 'Applications of AI for Anomaly Detection', en: 'Applications of AI for Anomaly Detection' },
       issuer: 'NVIDIA',
       year: '2025',
       icon: 'fas fa-microchip',
@@ -134,6 +139,10 @@ export class SkillsComponent implements OnInit {
 
   translate(key: string): string {
     return this.translationService.translate(key);
+  }
+
+  text(value: I18nText): string {
+    return this.translationService.t(value);
   }
 
   getFilteredSkills(): Skill[] {
