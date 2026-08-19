@@ -52,35 +52,65 @@
 }
 
 .tab-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   font-weight: 600;
-  font-size: 1em;
-  padding: 0.55em 1.6em;
+  font-size: 1.05rem;
+  padding: 0.65em 1.7em;
   border-radius: 2em;
-  border: 2px solid var(--border-color);
-  background: var(--bg-color);
-  color: var(--text-color);
+  border: 2px solid var(--tab-color, var(--primary-color));
+  background: var(--tab-bg, var(--bg-color));
+  color: var(--tab-color, var(--text-color));
   box-shadow: var(--shadow-sm);
   cursor: pointer;
-  transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+  transition: background 0.25s, color 0.25s, box-shadow 0.25s, transform 0.25s, border-color 0.25s;
   outline: none;
-  position: relative;
+
+  i {
+    font-size: 1rem;
+  }
+
+  &.tab-professional {
+    --tab-color: #3b82f6;
+    --tab-gradient: linear-gradient(135deg, #2563eb, #60a5fa);
+    --tab-bg: rgba(59, 130, 246, 0.1);
+    --tab-shadow: rgba(59, 130, 246, 0.28);
+  }
+
+  &.tab-education {
+    --tab-color: #10b981;
+    --tab-gradient: linear-gradient(135deg, #059669, #34d399);
+    --tab-bg: rgba(16, 185, 129, 0.1);
+    --tab-shadow: rgba(16, 185, 129, 0.28);
+  }
+
+  &.tab-competitions {
+    --tab-color: #f59e0b;
+    --tab-gradient: linear-gradient(135deg, #d97706, #fbbf24);
+    --tab-bg: rgba(245, 158, 11, 0.14);
+    --tab-shadow: rgba(245, 158, 11, 0.3);
+  }
+
+  &.tab-associative {
+    --tab-color: #8b5cf6;
+    --tab-gradient: linear-gradient(135deg, #6d28d9, #a78bfa);
+    --tab-bg: rgba(139, 92, 246, 0.12);
+    --tab-shadow: rgba(139, 92, 246, 0.3);
+  }
 
   &:not(.active):hover {
-    background: var(--primary-color);
+    background: var(--tab-color);
     color: #fff;
-    transform: scale(1.06);
-    box-shadow: 0 6px 18px var(--shadow-color-light);
+    transform: translateY(-3px) scale(1.04);
+    box-shadow: 0 8px 20px var(--tab-shadow);
   }
 
   &.active {
-    background: var(--primary-gradient);
+    background: var(--tab-gradient);
     color: #fff;
     border-color: transparent;
-    box-shadow: 0 6px 18px var(--shadow-color);
-  }
-
-  i {
-    font-size: 0.9rem;
+    box-shadow: 0 6px 18px var(--tab-shadow);
   }
 }
 
@@ -236,6 +266,45 @@
         .card-description {
           font-size: 0.97em;
           margin-bottom: 1rem;
+        }
+
+        .card-desc-list {
+          list-style: none;
+          margin: 0 0 1rem;
+          padding: 0;
+
+          li {
+            position: relative;
+            padding-left: 1.2rem;
+            margin-bottom: 0.45rem;
+            line-height: 1.55;
+            color: var(--text-secondary);
+
+            &::before {
+              content: '•';
+              position: absolute;
+              left: 0;
+              color: var(--primary-color);
+              font-weight: 700;
+            }
+
+            &.highlighted {
+              color: var(--primary-dark);
+              font-weight: 700;
+              padding: 0.55rem 0.85rem 0.55rem 1.9rem;
+              margin-top: 0.5rem;
+              background: var(--tab-bg, linear-gradient(135deg, rgba(184, 134, 11, 0.12), rgba(218, 165, 32, 0.06)));
+              border: 1px solid var(--primary-color);
+              border-radius: 10px;
+
+              &::before {
+                content: '★';
+                left: 0.65rem;
+                top: 0.5rem;
+                font-weight: 900;
+              }
+            }
+          }
         }
 
         .card-cert-link {

@@ -220,6 +220,29 @@
       flex: 1;
     }
 
+    .card-desc-list {
+      list-style: none;
+      margin: 0 0 1.25rem;
+      padding: 0;
+      flex: 1;
+
+      li {
+        position: relative;
+        padding-left: 1.2rem;
+        margin-bottom: 0.45rem;
+        line-height: 1.6;
+        color: var(--text-secondary);
+
+        &::before {
+          content: '•';
+          position: absolute;
+          left: 0;
+          color: var(--primary-color);
+          font-weight: 700;
+        }
+      }
+    }
+
     .card-technologies {
       display: flex;
       flex-wrap: wrap;

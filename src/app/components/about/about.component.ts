@@ -15,6 +15,18 @@ export class AboutComponent implements OnInit {
 
   ngOnInit() {}
 
+  getAge(): number {
+    const birthDate = new Date(1999, 1, 17);
+    const now = new Date();
+    let age = now.getFullYear() - birthDate.getFullYear();
+    const beforeBirthday = now.getMonth() < birthDate.getMonth()
+      || (now.getMonth() === birthDate.getMonth() && now.getDate() < birthDate.getDate());
+    if (beforeBirthday) {
+      age--;
+    }
+    return age;
+  }
+
   translate(key: string): string {
     return this.translationService.translate(key);
   }

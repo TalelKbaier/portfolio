@@ -29,7 +29,7 @@ export class ProjectsComponent implements OnInit {
     // Projet de Fin d'Études
     {
       title: 'PFE – Application Web Intelligente (2026)',
-      description: 'Application web intelligente – IA, automatisation, Cloud et CI/CD. Développement d\'une application web intégrant un assistant IA et des workflows d\'automatisation avec n8n. Conception et automatisation d\'un pipeline CI/CD dans Azure DevOps (création et publication d\'images Docker sur Docker Hub). Conteneurisation avec Docker, orchestration avec Kubernetes et déploiement sur une infrastructure virtualisée avec Proxmox. Supervision et monitoring avec Prometheus et Grafana. Déploiement de machines virtuelles dédiées au stockage persistant des données.',
+      description: 'Application web intelligente construite de bout en bout, combinant développement full stack, assistant IA conversationnel et automatisation de tâches métier. Conception et développement complet de l\'interface et de la logique métier (frontend & backend) de l\'application. Intégration d\'un assistant IA conversationnel (chat) qui dialogue avec les utilisateurs et traite leurs demandes en temps réel. Mise en place de workflows d\'automatisation avec n8n pour automatiser les tâches métier récurrentes (traitement de données, notifications, intégration d\'API IA). Conception et automatisation d\'un pipeline CI/CD dans Azure DevOps, assurant la création et la publication des images Docker sur Docker Hub. Conteneurisation de l\'application avec Docker, orchestration avec Kubernetes et déploiement sur une infrastructure virtualisée avec Proxmox. Supervision et monitoring avec Prometheus pour la collecte des métriques et Grafana pour leur visualisation. Déploiement de machines virtuelles dédiées au stockage persistant des données de l\'application.',
       technologies: ['Azure DevOps', 'Docker', 'Kubernetes', 'Proxmox', 'n8n', 'Prometheus', 'Grafana', 'Assistants IA'],
       category: 'pfe',
       status: 'completed',
@@ -149,6 +149,19 @@ export class ProjectsComponent implements OnInit {
       return this.projects;
     }
     return this.projects.filter(project => project.category === this.activeCategory);
+  }
+
+  getDescriptionList(project: Project): string[] {
+    return project.description
+      .split(/\. /)
+      .map((item, index, arr) => {
+        let text = item.trim();
+        if (index < arr.length - 1 && !text.endsWith('.')) {
+          text += '.';
+        }
+        return text;
+      })
+      .filter(text => text.length > 0);
   }
 
   getFeaturedProjects(): Project[] {

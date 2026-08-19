@@ -115,6 +115,13 @@ export class SkillsComponent implements OnInit {
       year: '2022',
       icon: 'fas fa-handshake',
       link: 'https://drive.google.com/file/d/10do1VP9yPhhgEePjt8Wj_T-3p15IOPrL/view?usp=sharing'
+    },
+    {
+      name: 'Applications of AI for Anomaly Detection',
+      issuer: 'NVIDIA',
+      year: '2025',
+      icon: 'fas fa-microchip',
+      link: 'https://learn.nvidia.com/certificates?id=C8S1VEMeR1KTV7Cr_Bgxtw'
     }
   ];
 

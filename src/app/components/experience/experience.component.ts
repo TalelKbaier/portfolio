@@ -142,6 +142,23 @@ export class ExperienceComponent implements OnInit {
     this.activeTab = tab;
   }
 
+  getDescriptionList(exp: Experience): { text: string; highlight: boolean }[] {
+    return exp.description
+      .split(/\. /)
+      .map((item, index, arr) => {
+        let text = item.trim();
+        if (index < arr.length - 1 && !text.endsWith('.')) {
+          text += '.';
+        }
+        return text;
+      })
+      .filter(text => text.length > 0)
+      .map(text => ({
+        text,
+        highlight: /major|mention excellent/i.test(text)
+      }));
+  }
+
   getCurrentExperiences() {
     switch (this.activeTab) {
       case 'professional':
